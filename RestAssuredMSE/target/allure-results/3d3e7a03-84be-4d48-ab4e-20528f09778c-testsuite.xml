@@ -1,0 +1,1645 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1685701110691" stop="1685701387888" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>ULP BFF SUITE : ULP BFF</name>
+    <title>ULP BFF SUITE : ULP BFF</title>
+    <test-cases>
+        <test-case start="1685701110846" stop="1685701116168" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrl</name>
+            <title>Verify that user is able to generate digiurl</title>
+            <description type="text">Verify that user is able to generate digiurl </description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrl"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701116201" stop="1685701198088" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701198096" stop="1685701199500" status="failed">
+            <name>API_03_VerifyUserIsAbleToGenerateToken</name>
+            <title>Verify user is able to generate token</title>
+            <description type="text">Verify user is able to generate token</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerEwalletTest.API_03_VerifyUserIsAbleToGenerateToken(DigilockerEwalletTest.java:71)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGenerateToken"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701199505" stop="1685701199981" status="passed">
+            <name>API_04_VerifyUserIsAbleToUenerateUuid</name>
+            <title>Verify user is able to generate uuid</title>
+            <description type="text">Verify user is able to generate uuid</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_04_VerifyUserIsAbleToUenerateUuid"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701199990" stop="1685701201135" status="passed">
+            <name>API_05_VerifyUserIsAbleToGetStateList</name>
+            <title>Get State List</title>
+            <description type="text">Get State List</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_05_VerifyUserIsAbleToGetStateList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701201147" stop="1685701202178" status="passed">
+            <name>API_06_VerifyUserIsAbleToGetDistrictList</name>
+            <title>Verify user is able to get District list</title>
+            <description type="text">Verify user is able to get District list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_06_VerifyUserIsAbleToGetDistrictList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701202181" stop="1685701203564" status="passed">
+            <name>API_07_VerifyUserIsAbleToGetBlockList</name>
+            <title>Verify user is able to get Block list</title>
+            <description type="text">Verify user is able to get Block list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_07_VerifyUserIsAbleToGetBlockList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701203576" stop="1685701219402" status="broken">
+            <name>API_08_VerifyUserIsAbleToGetSchoolList</name>
+            <title>Verify user is able to get school list</title>
+            <description type="text">Verify user is able to get school list</description>
+            <failure>
+                <message>IOException: Attempted read on closed stream.</message>
+                <stack-trace>java.io.IOException: Attempted read on closed stream.&#13;
+	at org.apache.http.conn.EofSensorInputStream.isReadAllowed(EofSensorInputStream.java:107)&#13;
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:133)&#13;
+	at org.apache.http.conn.EofSensorInputStream$read.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.convertStreamToByteArray(RestAssuredResponseOptionsGroovyImpl.groovy:477)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:149)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:100)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:231)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.charsetToString(RestAssuredResponseOptionsGroovyImpl.groovy:529)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$charsetToString$3.callCurrent(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:190)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:180)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asString(RestAssuredResponseOptionsImpl.java:234)&#13;
+	at io.restassured.response.ResponseBodyData$asString.call(Unknown Source)&#13;
+	at io.restassured.internal.support.Prettifier.getPrettifiedBodyIfPossible(Prettifier.groovy:44)&#13;
+	at io.restassured.internal.support.Prettifier$getPrettifiedBodyIfPossible.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asPrettyString(RestAssuredResponseOptionsGroovyImpl.groovy:184)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asPrettyString(RestAssuredResponseOptionsImpl.java:242)&#13;
+	at com.api.view.APIview.getSchoolListResponse(APIview.java:384)&#13;
+	at com.api.script.DigilockerEwalletTest.API_08_VerifyUserIsAbleToGetSchoolList(DigilockerEwalletTest.java:162)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_08_VerifyUserIsAbleToGetSchoolList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701219415" stop="1685701220079" status="failed">
+            <name>API_09_verifyUserIsAbleToLogoutFromDigilocker</name>
+            <title>verify user is able to logout from digilocker</title>
+            <description type="text">verify user is able to logout from digilocker</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerEwalletTest.API_09_verifyUserIsAbleToLogoutFromDigilocker(DigilockerEwalletTest.java:180)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_09_verifyUserIsAbleToLogoutFromDigilocker"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701220087" stop="1685701220643" status="failed">
+            <name>API_10_VerifyUserIsAbleToGetStudentData</name>
+            <title>Get Student Data</title>
+            <description type="text">Get Student Data</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:301)&#13;
+	at com.api.view.APIview.getSuccessMessageStudentData(APIview.java:429)&#13;
+	at com.api.script.DigilockerEwalletTest.API_10_VerifyUserIsAbleToGetStudentData(DigilockerEwalletTest.java:196)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_10_VerifyUserIsAbleToGetStudentData"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701220648" stop="1685701253830" status="failed">
+            <name>API_11_VerifyThatUserIsAbleToGenerateAuthCodeAndTokenForUsername</name>
+            <title>Verify that user is able to generate auth code and token using username</title>
+            <description type="text">Verify that user is able to generate auth code and token using ser name</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerEwalletTest.API_11_VerifyThatUserIsAbleToGenerateAuthCodeAndTokenForUsername(DigilockerEwalletTest.java:214)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_11_VerifyThatUserIsAbleToGenerateAuthCodeAndTokenForUsername"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701253846" stop="1685701254939" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateTokenUsingWrongAuthCode</name>
+            <title>Verify user is able to generate token using wrong auth code</title>
+            <description type="text">Verify user is able to generate token using wrong auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletNegativeTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateTokenUsingWrongAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701254943" stop="1685701256265" status="passed">
+            <name>API_02_VerifyUserIsAbleToGetStateList</name>
+            <title>Get State List</title>
+            <description type="text">Get State List</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletNegativeTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGetStateList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701256269" stop="1685701257212" status="passed">
+            <name>API_03_VerifyUserIsAbleToGetDistrictList</name>
+            <title>Verify user is able to get District list</title>
+            <description type="text">Verify user is able to get District list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletNegativeTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGetDistrictList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701257216" stop="1685701258173" status="passed">
+            <name>API_04_VerifyUserIsAbleToGetBlockList</name>
+            <title>Verify user is able to get Block list</title>
+            <description type="text">Verify user is able to get Block list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletNegativeTest"/>
+                <label name="testMethod" value="API_04_VerifyUserIsAbleToGetBlockList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701258185" stop="1685701274682" status="broken">
+            <name>API_05_VerifyUserIsAbleToGetSchoolList</name>
+            <title>Verify user is able to get school list</title>
+            <description type="text">Verify user is able to get school list</description>
+            <failure>
+                <message>IOException: Attempted read on closed stream.</message>
+                <stack-trace>java.io.IOException: Attempted read on closed stream.&#13;
+	at org.apache.http.conn.EofSensorInputStream.isReadAllowed(EofSensorInputStream.java:107)&#13;
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:133)&#13;
+	at org.apache.http.conn.EofSensorInputStream$read.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.convertStreamToByteArray(RestAssuredResponseOptionsGroovyImpl.groovy:477)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:149)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:100)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:231)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.charsetToString(RestAssuredResponseOptionsGroovyImpl.groovy:529)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$charsetToString$3.callCurrent(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:190)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:180)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asString(RestAssuredResponseOptionsImpl.java:234)&#13;
+	at io.restassured.response.ResponseBodyData$asString.call(Unknown Source)&#13;
+	at io.restassured.internal.support.Prettifier.getPrettifiedBodyIfPossible(Prettifier.groovy:44)&#13;
+	at io.restassured.internal.support.Prettifier$getPrettifiedBodyIfPossible.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asPrettyString(RestAssuredResponseOptionsGroovyImpl.groovy:184)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asPrettyString(RestAssuredResponseOptionsImpl.java:242)&#13;
+	at com.api.view.APIview.getListNegativeResponse(APIview.java:694)&#13;
+	at com.api.script.DigilockerEwalletNegativeTest.API_05_VerifyUserIsAbleToGetSchoolList(DigilockerEwalletNegativeTest.java:116)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletNegativeTest"/>
+                <label name="testMethod" value="API_05_VerifyUserIsAbleToGetSchoolList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701274695" stop="1685701275305" status="failed">
+            <name>API_06_verifyUserIsAbleToLogoutFromDigilocker</name>
+            <title>verify user is able to logout from digilocker</title>
+            <description type="text">verify user is able to logout from digilocker</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerEwalletNegativeTest.API_06_verifyUserIsAbleToLogoutFromDigilocker(DigilockerEwalletNegativeTest.java:137)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletNegativeTest"/>
+                <label name="testMethod" value="API_06_verifyUserIsAbleToLogoutFromDigilocker"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701275311" stop="1685701275707" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrlForPortal</name>
+            <title>Verify that user is able to generate digiurl for Portal</title>
+            <description type="text">Verify that user is able to generate digiurlfor portal</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrlForPortal"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701275715" stop="1685701307728" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701307732" stop="1685701309337" status="failed">
+            <name>API_03_VerifyUserIsAbleToGenerateToken</name>
+            <title>Verify user is able to generate token</title>
+            <description type="text">Verify user is able to generate token</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerportalTest.API_03_VerifyUserIsAbleToGenerateToken(DigilockerportalTest.java:75)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGenerateToken"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701309339" stop="1685701310321" status="passed">
+            <name>API_04_VerifyUserIsAbleToGenerateUuidPortal</name>
+            <title>Verify user is able to generate uuid for portal</title>
+            <description type="text">Verify user is able to generate uuid for portal</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_04_VerifyUserIsAbleToGenerateUuidPortal"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701310324" stop="1685701311766" status="passed">
+            <name>API_05_VerifyUserIsAbleToGetStateList</name>
+            <title>Get State List</title>
+            <description type="text">Get State List</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_05_VerifyUserIsAbleToGetStateList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701311772" stop="1685701312672" status="passed">
+            <name>API_06_VerifyUserIsAbleToGetDistrictList</name>
+            <title>Verify user is able to get District list</title>
+            <description type="text">Verify user is able to get District list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_06_VerifyUserIsAbleToGetDistrictList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701312676" stop="1685701314088" status="passed">
+            <name>API_07_VerifyUserIsAbleToGetBlockList</name>
+            <title>Verify user is able to get Block list</title>
+            <description type="text">Verify user is able to get Block list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_07_VerifyUserIsAbleToGetBlockList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701314093" stop="1685701330472" status="broken">
+            <name>API_08_VerifyUserIsAbleToGetSchoolList</name>
+            <title>Verify user is able to get school list</title>
+            <description type="text">Verify user is able to get school list</description>
+            <failure>
+                <message>IOException: Attempted read on closed stream.</message>
+                <stack-trace>java.io.IOException: Attempted read on closed stream.&#13;
+	at org.apache.http.conn.EofSensorInputStream.isReadAllowed(EofSensorInputStream.java:107)&#13;
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:133)&#13;
+	at org.apache.http.conn.EofSensorInputStream$read.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.convertStreamToByteArray(RestAssuredResponseOptionsGroovyImpl.groovy:477)&#13;
+	at jdk.internal.reflect.GeneratedMethodAccessor152.invoke(Unknown Source)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:149)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:100)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:231)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.charsetToString(RestAssuredResponseOptionsGroovyImpl.groovy:529)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$charsetToString$3.callCurrent(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:190)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:180)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asString(RestAssuredResponseOptionsImpl.java:234)&#13;
+	at io.restassured.response.ResponseBodyData$asString.call(Unknown Source)&#13;
+	at io.restassured.internal.support.Prettifier.getPrettifiedBodyIfPossible(Prettifier.groovy:44)&#13;
+	at io.restassured.internal.support.Prettifier$getPrettifiedBodyIfPossible.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asPrettyString(RestAssuredResponseOptionsGroovyImpl.groovy:184)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asPrettyString(RestAssuredResponseOptionsImpl.java:242)&#13;
+	at com.api.view.APIview.getSchoolListResponse(APIview.java:384)&#13;
+	at com.api.script.DigilockerportalTest.API_08_VerifyUserIsAbleToGetSchoolList(DigilockerportalTest.java:164)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_08_VerifyUserIsAbleToGetSchoolList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701330477" stop="1685701331388" status="failed">
+            <name>API_09_VerifyUserIsAbleToVerifyUdiseDetails</name>
+            <title>Verify user is able to verify udise details</title>
+            <description type="text">Verify user is able to verify udise details</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:301)&#13;
+	at com.api.view.APIview.getSuccessStatusUdiseVerify(APIview.java:556)&#13;
+	at com.api.script.DigilockerportalTest.API_09_VerifyUserIsAbleToVerifyUdiseDetails(DigilockerportalTest.java:185)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_09_VerifyUserIsAbleToVerifyUdiseDetails"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701331390" stop="1685701331829" status="failed">
+            <name>API_09_verifyUserIsAbleToLogoutFromDigilocker</name>
+            <title>verify user is able to logout from digilocker</title>
+            <description type="text">verify user is able to logout from digilocker</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerportalTest.API_09_verifyUserIsAbleToLogoutFromDigilocker(DigilockerportalTest.java:219)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_09_verifyUserIsAbleToLogoutFromDigilocker"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701331836" stop="1685701331861" status="broken">
+            <name>API_10_VerifyUserIsAbleToGetSchoolDetails</name>
+            <title>Get School Details</title>
+            <description type="text">Get School Details</description>
+            <failure>
+                <message>IllegalArgumentException: parameterValue cannot be null</message>
+                <stack-trace>java.lang.IllegalArgumentException: parameterValue cannot be null&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:516)&#13;
+	at io.restassured.builder.RequestSpecBuilder.addPathParam(RequestSpecBuilder.java:421)&#13;
+	at com.api.script.DigilockerportalTest.API_10_VerifyUserIsAbleToGetSchoolDetails(DigilockerportalTest.java:194)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_10_VerifyUserIsAbleToGetSchoolDetails"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701331868" stop="1685701332343" status="failed">
+            <name>API_10_VerifyUserIsAbleToGetStudentData</name>
+            <title>Get Teacher Data</title>
+            <description type="text">Get Teacher Data</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:301)&#13;
+	at com.api.view.APIview.getSuccessMessageStudentData(APIview.java:429)&#13;
+	at com.api.script.DigilockerportalTest.API_10_VerifyUserIsAbleToGetStudentData(DigilockerportalTest.java:234)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_10_VerifyUserIsAbleToGetStudentData"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701332350" stop="1685701363331" status="passed">
+            <name>API_11_VerifyThatUserIsAbleToGenerateAuthCodeAndTokenForUsername</name>
+            <title>Verify that user is able to generate auth code and token using username for Portal</title>
+            <description type="text">Verify that user is able to generate auth code and token using username for portal</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_11_VerifyThatUserIsAbleToGenerateAuthCodeAndTokenForUsername"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701363340" stop="1685701363820" status="failed">
+            <name>API_12_VerifyUserIsAbleToGetDashboardCount</name>
+            <title>Verify user is able to get dashboard count</title>
+            <description type="text">Verify user is able to get dashboard count</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerportalTest.API_12_VerifyUserIsAbleToGetDashboardCount(DigilockerportalTest.java:266)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_12_VerifyUserIsAbleToGetDashboardCount"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701363832" stop="1685701364407" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateTokenUsingWrongAuthCode</name>
+            <title>Verify user is able to generate token using wrong auth code</title>
+            <description type="text">Verify user is able to generate token using wrong auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerPortalNegativeTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateTokenUsingWrongAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701364409" stop="1685701365462" status="passed">
+            <name>API_02_VerifyUserIsAbleToGetStateList</name>
+            <title>Get State List</title>
+            <description type="text">Get State List</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerPortalNegativeTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGetStateList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701365471" stop="1685701366315" status="passed">
+            <name>API_03_VerifyUserIsAbleToGetDistrictList</name>
+            <title>Verify user is able to get District list</title>
+            <description type="text">Verify user is able to get District list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerPortalNegativeTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGetDistrictList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701366321" stop="1685701367484" status="passed">
+            <name>API_04_VerifyUserIsAbleToGetBlockList</name>
+            <title>Verify user is able to get Block list</title>
+            <description type="text">Verify user is able to get Block list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerPortalNegativeTest"/>
+                <label name="testMethod" value="API_04_VerifyUserIsAbleToGetBlockList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701367487" stop="1685701384595" status="broken">
+            <name>API_05_VerifyUserIsAbleToGetSchoolList</name>
+            <title>Verify user is able to get school list</title>
+            <description type="text">Verify user is able to get school list</description>
+            <failure>
+                <message>IOException: Attempted read on closed stream.</message>
+                <stack-trace>java.io.IOException: Attempted read on closed stream.&#13;
+	at org.apache.http.conn.EofSensorInputStream.isReadAllowed(EofSensorInputStream.java:107)&#13;
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:133)&#13;
+	at org.apache.http.conn.EofSensorInputStream$read.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.convertStreamToByteArray(RestAssuredResponseOptionsGroovyImpl.groovy:477)&#13;
+	at jdk.internal.reflect.GeneratedMethodAccessor152.invoke(Unknown Source)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:149)&#13;
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:100)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:231)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.charsetToString(RestAssuredResponseOptionsGroovyImpl.groovy:529)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$charsetToString$3.callCurrent(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:190)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asString(RestAssuredResponseOptionsGroovyImpl.groovy:180)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asString(RestAssuredResponseOptionsImpl.java:234)&#13;
+	at io.restassured.response.ResponseBodyData$asString.call(Unknown Source)&#13;
+	at io.restassured.internal.support.Prettifier.getPrettifiedBodyIfPossible(Prettifier.groovy:44)&#13;
+	at io.restassured.internal.support.Prettifier$getPrettifiedBodyIfPossible.call(Unknown Source)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asPrettyString(RestAssuredResponseOptionsGroovyImpl.groovy:184)&#13;
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.asPrettyString(RestAssuredResponseOptionsImpl.java:242)&#13;
+	at com.api.view.APIview.getListNegativeResponse(APIview.java:694)&#13;
+	at com.api.script.DigilockerPortalNegativeTest.API_05_VerifyUserIsAbleToGetSchoolList(DigilockerPortalNegativeTest.java:116)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerPortalNegativeTest"/>
+                <label name="testMethod" value="API_05_VerifyUserIsAbleToGetSchoolList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701384602" stop="1685701385629" status="passed">
+            <name>API_06_VerifyUserIsAbleToVerifyUdiseDetails</name>
+            <title>Verify user is able to verify udise details</title>
+            <description type="text">Verify user is able to verify udise details</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerPortalNegativeTest"/>
+                <label name="testMethod" value="API_06_VerifyUserIsAbleToVerifyUdiseDetails"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701385640" stop="1685701386091" status="failed">
+            <name>API_07_verifyUserIsAbleToLogoutFromDigilocker</name>
+            <title>verify user is able to logout from digilocker</title>
+            <description type="text">verify user is able to logout from digilocker</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerPortalNegativeTest.API_07_verifyUserIsAbleToLogoutFromDigilocker(DigilockerPortalNegativeTest.java:153)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerPortalNegativeTest"/>
+                <label name="testMethod" value="API_07_verifyUserIsAbleToLogoutFromDigilocker"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701386103" stop="1685701386768" status="broken">
+            <name>API_01_VerifyUserIsAbleToSearchStudent</name>
+            <title>Verify user is able to search student</title>
+            <description type="text">Verify user is able to search student</description>
+            <failure>
+                <message>NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "com.api.pojoResponse.BffCredentialsSearchStudentsresponse.getResult()" is null</message>
+                <stack-trace>java.lang.NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "com.api.pojoResponse.BffCredentialsSearchStudentsresponse.getResult()" is null&#13;
+	at com.api.view.APIview.getCredentialID(APIview.java:490)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_01_VerifyUserIsAbleToSearchStudent(DigilockerBFFCredentialsTest.java:59)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToSearchStudent"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701386773" stop="1685701386786" status="broken">
+            <name>API_02_GetSchemaIDByCredentialsID</name>
+            <title>Get Schema ID bt credentials ID</title>
+            <description type="text">Get schema ID by credentials ID</description>
+            <failure>
+                <message>IllegalArgumentException: parameterValue cannot be null</message>
+                <stack-trace>java.lang.IllegalArgumentException: parameterValue cannot be null&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:516)&#13;
+	at io.restassured.builder.RequestSpecBuilder.addPathParam(RequestSpecBuilder.java:421)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_02_GetSchemaIDByCredentialsID(DigilockerBFFCredentialsTest.java:71)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_02_GetSchemaIDByCredentialsID"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701386791" stop="1685701386810" status="broken">
+            <name>API_03_GetRenderSchema</name>
+            <title>Get render schema</title>
+            <description type="text">Get render schema</description>
+            <failure>
+                <message>IllegalArgumentException: parameterValue cannot be null</message>
+                <stack-trace>java.lang.IllegalArgumentException: parameterValue cannot be null&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:516)&#13;
+	at io.restassured.builder.RequestSpecBuilder.addPathParam(RequestSpecBuilder.java:421)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_03_GetRenderSchema(DigilockerBFFCredentialsTest.java:87)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_03_GetRenderSchema"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701386819" stop="1685701386822" status="broken">
+            <name>API_04_GetRenderSchemaTemplate</name>
+            <title>Get render schema template</title>
+            <description type="text">Get render schema template</description>
+            <failure>
+                <message>IllegalArgumentException: parameterValue cannot be null</message>
+                <stack-trace>java.lang.IllegalArgumentException: parameterValue cannot be null&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:516)&#13;
+	at io.restassured.builder.RequestSpecBuilder.addPathParam(RequestSpecBuilder.java:421)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_04_GetRenderSchemaTemplate(DigilockerBFFCredentialsTest.java:103)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_04_GetRenderSchemaTemplate"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701386828" stop="1685701387307" status="failed">
+            <name>API_05_CredentialRender</name>
+            <title>Credential render</title>
+            <description type="text">Credentail render</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_05_CredentialRender(DigilockerBFFCredentialsTest.java:129)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_05_CredentialRender"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685701387311" stop="1685701387733" status="failed">
+            <name>API_06_VerifyUserIsAbleToSearchTeacher</name>
+            <title>Verify user is able to search teacher</title>
+            <description type="text">Verify user is able to search teacher</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:276)&#13;
+	at com.api.view.commonMethodsView.validateStatusCode(commonMethodsView.java:25)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_06_VerifyUserIsAbleToSearchTeacher(DigilockerBFFCredentialsTest.java:149)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_06_VerifyUserIsAbleToSearchTeacher"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="3616@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

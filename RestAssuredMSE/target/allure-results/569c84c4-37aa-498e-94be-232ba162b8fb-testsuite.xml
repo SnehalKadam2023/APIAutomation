@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1683111808689" stop="1683111842226" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1683111808833" stop="1683111812568" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrl</name>
+            <title>Verify that user is able to generate digiurl</title>
+            <description type="text">Verify that user is able to generate digiurl </description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrl"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="5820@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1683111812586" stop="1683111842186" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="5820@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

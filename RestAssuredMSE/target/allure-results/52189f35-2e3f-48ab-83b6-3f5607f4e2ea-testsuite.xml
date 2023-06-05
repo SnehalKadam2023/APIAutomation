@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1682415110464" stop="1682415150719" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1682415110641" stop="1682415150673" status="passed">
+            <name>ReqreqCreateUser</name>
+            <description></description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.logintest"/>
+                <label name="testMethod" value="ReqreqCreateUser"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="4860@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

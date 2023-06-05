@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1684491649236" stop="1684491715786" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1684491649351" stop="1684491654017" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrlForPortal</name>
+            <title>Verify that user is able to generate digiurl for Portal</title>
+            <description type="text">Verify that user is able to generate digiurlfor portal</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrlForPortal"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684491654051" stop="1684491685693" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684491685702" stop="1684491687211" status="passed">
+            <name>API_03_VerifyUserIsAbleToGenerateToken</name>
+            <title>Verify user is able to generate token</title>
+            <description type="text">Verify user is able to generate token</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGenerateToken"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684491687218" stop="1684491688057" status="passed">
+            <name>API_05_VerifyUserIsAbleToGetStateList</name>
+            <title>Get State List</title>
+            <description type="text">Get State List</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_05_VerifyUserIsAbleToGetStateList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684491688087" stop="1684491688947" status="passed">
+            <name>API_06_VerifyUserIsAbleToGetDistrictList</name>
+            <title>Verify user is able to get District list</title>
+            <description type="text">Verify user is able to get District list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_06_VerifyUserIsAbleToGetDistrictList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684491688955" stop="1684491689924" status="passed">
+            <name>API_07_VerifyUserIsAbleToGetBlockList</name>
+            <title>Verify user is able to get Block list</title>
+            <description type="text">Verify user is able to get Block list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_07_VerifyUserIsAbleToGetBlockList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684491689933" stop="1684491714999" status="passed">
+            <name>API_08_VerifyUserIsAbleToGetSchoolList</name>
+            <title>Verify user is able to get school list</title>
+            <description type="text">Verify user is able to get school list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_08_VerifyUserIsAbleToGetSchoolList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684491715009" stop="1684491715756" status="passed">
+            <name>API_09_VerifyUserIsAbleToVerifyUdiseDetails</name>
+            <title>Verify user is able to verify udise details</title>
+            <description type="text">Verify user is able to verify udise details</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_09_VerifyUserIsAbleToVerifyUdiseDetails"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="10572@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

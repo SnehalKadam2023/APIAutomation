@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1684821607769" stop="1684821648489" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>ULP BFF SUITE : ULP BFF</name>
+    <title>ULP BFF SUITE : ULP BFF</title>
+    <test-cases>
+        <test-case start="1684821607875" stop="1684821611282" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrl</name>
+            <title>Verify that user is able to generate digiurl</title>
+            <description type="text">Verify that user is able to generate digiurl </description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrl"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684821611293" stop="1684821637937" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684821637944" stop="1684821640234" status="passed">
+            <name>API_03_VerifyUserIsAbleToGenerateToken</name>
+            <title>Verify user is able to generate token</title>
+            <description type="text">Verify user is able to generate token</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGenerateToken"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684821640241" stop="1684821645936" status="passed">
+            <name>API_01_VerifyUserIsAbleToSearchStudent</name>
+            <title>Verify user is able to search student</title>
+            <description type="text">Verify user is able to search student</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToSearchStudent"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684821645954" stop="1684821646425" status="passed">
+            <name>API_02_GetSchemaIDByCredentialsID</name>
+            <title>Get Schema ID bt credentials ID</title>
+            <description type="text">Get schema ID by credentials ID</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_02_GetSchemaIDByCredentialsID"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684821646431" stop="1684821647015" status="passed">
+            <name>API_03_GetRenderSchema</name>
+            <title>Get render schema</title>
+            <description type="text">Get render schema</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_03_GetRenderSchema"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684821647021" stop="1684821647892" status="passed">
+            <name>API_04_GetRenderSchemaTemplate</name>
+            <title>Get render schema template</title>
+            <description type="text">Get render schema template</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_04_GetRenderSchemaTemplate"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684821647900" stop="1684821648400" status="passed">
+            <name>API_05_CredentialRender</name>
+            <title>Credential render</title>
+            <description type="text">Credentail render</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_05_CredentialRender"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="12928@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

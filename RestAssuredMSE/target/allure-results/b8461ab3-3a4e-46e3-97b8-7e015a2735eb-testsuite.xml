@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1684516971520" stop="1684517043387" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1684516971625" stop="1684516974855" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrlForPortal</name>
+            <title>Verify that user is able to generate digiurl for Portal</title>
+            <description type="text">Verify that user is able to generate digiurlfor portal</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrlForPortal"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="7808@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684516974864" stop="1684517040463" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="7808@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684517040467" stop="1684517042733" status="passed">
+            <name>API_03_VerifyUserIsAbleToGenerateToken</name>
+            <title>Verify user is able to generate token</title>
+            <description type="text">Verify user is able to generate token</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGenerateToken"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="7808@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684517042743" stop="1684517043284" status="passed">
+            <name>API_12_VerifyUserIsAbleToGetDashboardCount</name>
+            <title>Verify user is able to get dashboard count</title>
+            <description type="text">Verify user is able to get dashboard count</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerportalTest"/>
+                <label name="testMethod" value="API_12_VerifyUserIsAbleToGetDashboardCount"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="7808@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

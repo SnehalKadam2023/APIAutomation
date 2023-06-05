@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1685004443873" stop="1685004520514" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>ULP BFF SUITE : ULP BFF</name>
+    <title>ULP BFF SUITE : ULP BFF</title>
+    <test-cases>
+        <test-case start="1685004443984" stop="1685004447843" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrl</name>
+            <title>Verify that user is able to generate digiurl</title>
+            <description type="text">Verify that user is able to generate digiurl </description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrl"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="18548@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685004447853" stop="1685004514949" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="18548@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685004514957" stop="1685004518631" status="passed">
+            <name>API_03_VerifyUserIsAbleToGenerateToken</name>
+            <title>Verify user is able to generate token</title>
+            <description type="text">Verify user is able to generate token</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGenerateToken"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="18548@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1685004518643" stop="1685004520453" status="failed">
+            <name>API_01_VerifyUserIsAbleToGenerateTokenUsingWrongAuthCode</name>
+            <title>Verify user is able to generate token using wrong auth code</title>
+            <description type="text">Verify user is able to generate token using wrong auth code</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:99)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1037)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:45)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:55)&#13;
+	at com.generic.WrapperFunctions.logReporter(WrapperFunctions.java:301)&#13;
+	at com.api.view.APIview.getSuccessMessage(APIview.java:193)&#13;
+	at com.api.script.DigilockerEwalletNegativeTest.API_01_VerifyUserIsAbleToGenerateTokenUsingWrongAuthCode(DigilockerEwalletNegativeTest.java:52)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP BFF SUITE"/>
+                <label name="testGroup" value="ULP BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletNegativeTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateTokenUsingWrongAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="18548@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

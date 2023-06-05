@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1684155225752" stop="1684155232216" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1684155225864" stop="1684155230037" status="passed">
+            <name>API_05_VerifyUserIsAbleToGetStateList</name>
+            <title>Get State List</title>
+            <description type="text">Get State List</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_05_VerifyUserIsAbleToGetStateList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="6104@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684155230050" stop="1684155231057" status="passed">
+            <name>API_06_VerifyUserIsAbleToGetDistrictList</name>
+            <title>Verify user is able to get District list</title>
+            <description type="text">Verify user is able to get District list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_06_VerifyUserIsAbleToGetDistrictList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="6104@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684155231067" stop="1684155231750" status="passed">
+            <name>API_07_VerifyUserIsAbleToGetBlockList</name>
+            <title>Verify user is able to get Block list</title>
+            <description type="text">Verify user is able to get Block list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_07_VerifyUserIsAbleToGetBlockList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="6104@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684155231761" stop="1684155232157" status="passed">
+            <name>API_08_VerifyUserIsAbleToGetSchoolList</name>
+            <title>Verify user is able to get school list</title>
+            <description type="text">Verify user is able to get school list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_08_VerifyUserIsAbleToGetSchoolList"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="6104@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

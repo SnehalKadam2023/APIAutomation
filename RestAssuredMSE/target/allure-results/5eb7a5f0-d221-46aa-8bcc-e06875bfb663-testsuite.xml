@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1684740981649" stop="1684740985949" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1684740981757" stop="1684740985833" status="broken">
+            <name>API_01_VerifyUserIsAbleToSearchStudent</name>
+            <title>Verify user is able to search student</title>
+            <description type="text">Verify user is able to search student</description>
+            <failure>
+                <message>NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "com.api.pojoResponse.BffCredentialsSearchStudentsresponse.getResult()" is null</message>
+                <stack-trace>java.lang.NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "com.api.pojoResponse.BffCredentialsSearchStudentsresponse.getResult()" is null&#13;
+	at com.api.view.APIview.getCredentialID(APIview.java:428)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_01_VerifyUserIsAbleToSearchStudent(DigilockerBFFCredentialsTest.java:48)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToSearchStudent"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="4964@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684740985847" stop="1684740985860" status="broken">
+            <name>API_02_GetSchemaIDByCredentialsID</name>
+            <title>Get Schema ID bt credentials ID</title>
+            <description type="text">Get schema ID by credentials ID</description>
+            <failure>
+                <message>IllegalArgumentException: parameterValue cannot be null</message>
+                <stack-trace>java.lang.IllegalArgumentException: parameterValue cannot be null&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:516)&#13;
+	at io.restassured.builder.RequestSpecBuilder.addPathParam(RequestSpecBuilder.java:421)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_02_GetSchemaIDByCredentialsID(DigilockerBFFCredentialsTest.java:58)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_02_GetSchemaIDByCredentialsID"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="4964@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684740985866" stop="1684740985875" status="broken">
+            <name>API_03_GetRenderSchema</name>
+            <title>Get render schema</title>
+            <description type="text">Get render schema</description>
+            <failure>
+                <message>IllegalArgumentException: parameterValue cannot be null</message>
+                <stack-trace>java.lang.IllegalArgumentException: parameterValue cannot be null&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)&#13;
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:516)&#13;
+	at io.restassured.builder.RequestSpecBuilder.addPathParam(RequestSpecBuilder.java:421)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_03_GetRenderSchema(DigilockerBFFCredentialsTest.java:73)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_03_GetRenderSchema"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="4964@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

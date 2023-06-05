@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ULP BFF SUITE" configfailurepolicy="continue">
+
+
+	<!-- Suite -->
+	<!-- If required try retry anyalzer listeners -->
+	<listeners>
+		<listener class-name="com.generic.AnnotationTransformer"/>
+    	<listener class-name="com.generic.HtmlCustomReporter"/>
+	</listeners>
+
+	<test name="ULP BFF">
+		<classes>
+			<class name="com.api.script.DigilockerEwalletTest" />
+			<class name="com.api.script.DigilockerBFFCredentialsTest" />
+			
+		</classes>
+	</test>
+
+</suite>

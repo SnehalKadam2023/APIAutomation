@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1684741023210" stop="1684741103362" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>ULP_BFF_Test_Suite : ULP_BFF</name>
+    <title>ULP_BFF_Test_Suite : ULP_BFF</title>
+    <test-cases>
+        <test-case start="1684741023321" stop="1684741026816" status="passed">
+            <name>API_01_VerifyUserIsAbleToGenerateDigiUrl</name>
+            <title>Verify that user is able to generate digiurl</title>
+            <description type="text">Verify that user is able to generate digiurl </description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP_BFF_Test_Suite"/>
+                <label name="testGroup" value="ULP_BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToGenerateDigiUrl"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="8368@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684741026828" stop="1684741092345" status="passed">
+            <name>API_02_VerifyUserIsAbleToGenerateAuthCode</name>
+            <title>Verify that user is able to generate auth code</title>
+            <description type="text">Verify that user is able to generate auth code</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP_BFF_Test_Suite"/>
+                <label name="testGroup" value="ULP_BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_02_VerifyUserIsAbleToGenerateAuthCode"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="8368@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684741092353" stop="1684741097408" status="passed">
+            <name>API_03_VerifyUserIsAbleToGenerateToken</name>
+            <title>Verify user is able to generate token</title>
+            <description type="text">Verify user is able to generate token</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP_BFF_Test_Suite"/>
+                <label name="testGroup" value="ULP_BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerEwalletTest"/>
+                <label name="testMethod" value="API_03_VerifyUserIsAbleToGenerateToken"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="8368@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684741097416" stop="1684741102861" status="passed">
+            <name>API_01_VerifyUserIsAbleToSearchStudent</name>
+            <title>Verify user is able to search student</title>
+            <description type="text">Verify user is able to search student</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP_BFF_Test_Suite"/>
+                <label name="testGroup" value="ULP_BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_01_VerifyUserIsAbleToSearchStudent"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="8368@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684741102871" stop="1684741103248" status="passed">
+            <name>API_02_GetSchemaIDByCredentialsID</name>
+            <title>Get Schema ID bt credentials ID</title>
+            <description type="text">Get schema ID by credentials ID</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP_BFF_Test_Suite"/>
+                <label name="testGroup" value="ULP_BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_02_GetSchemaIDByCredentialsID"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="8368@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1684741103252" stop="1684741103305" status="broken">
+            <name>API_03_GetRenderSchema</name>
+            <title>Get render schema</title>
+            <description type="text">Get render schema</description>
+            <failure>
+                <message>IllegalArgumentException: Path parameters were not correctly defined. Redundant path parameters are: credentialSchemaID=clf0rjgov0002tj15ml0fdest. Undefined path parameters are: credentialID.</message>
+                <stack-trace>java.lang.IllegalArgumentException: Path parameters were not correctly defined. Redundant path parameters are: credentialSchemaID=clf0rjgov0002tj15ml0fdest. Undefined path parameters are: credentialID.&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1250)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)&#13;
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1137)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)&#13;
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)&#13;
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)&#13;
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)&#13;
+	at io.restassured.filter.Filter$filter.call(Unknown Source)&#13;
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)&#13;
+	at io.restassured.filter.Filter$filter.call(Unknown Source)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)&#13;
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)&#13;
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1672)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)&#13;
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1678)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)&#13;
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)&#13;
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)&#13;
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:173)&#13;
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)&#13;
+	at com.api.script.DigilockerBFFCredentialsTest.API_03_GetRenderSchema(DigilockerBFFCredentialsTest.java:75)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)&#13;
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)&#13;
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)&#13;
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)&#13;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)&#13;
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)&#13;
+	at org.testng.TestRunner.run(TestRunner.java:596)&#13;
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)&#13;
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)&#13;
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)&#13;
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)&#13;
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)&#13;
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)&#13;
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)&#13;
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)&#13;
+	at org.testng.TestNG.runSuites(TestNG.java:1063)&#13;
+	at org.testng.TestNG.run(TestNG.java:1031)&#13;
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)&#13;
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)&#13;
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)&#13;
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="ULP_BFF_Test_Suite"/>
+                <label name="testGroup" value="ULP_BFF"/>
+                <label name="testClass" value="com.api.script.DigilockerBFFCredentialsTest"/>
+                <label name="testMethod" value="API_03_GetRenderSchema"/>
+                <label name="host" value="DESKTOP-UJIBV1G"/>
+                <label name="thread" value="8368@DESKTOP-UJIBV1G.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
