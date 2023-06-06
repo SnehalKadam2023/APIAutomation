@@ -2,9 +2,13 @@ package com.api.script;
 
 import static io.restassured.RestAssured.given;
 
+import java.util.ArrayList;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.api.pojoResponse.ResultSchoolData;
+import com.api.pojoResponse.UserData;
 import com.api.view.APIview;
 import com.api.view.commonMethodsView;
 import com.generic.ApiResreqURL;
@@ -28,7 +32,9 @@ public class DigilockerportalTest extends BaseTest {
 	public static String strDistrictCode;
 	String strBlockCode;
 	public static String strUdiseCode;
-
+	private ArrayList<UserData> strTeacherData;
+	private ResultSchoolData strSchoolDetails;
+	private String strMeriPehchanID;
 
 	//Initialize
 	private APIview objAPIview= new APIview(this);
@@ -74,30 +80,32 @@ public class DigilockerportalTest extends BaseTest {
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 		objAPIview.getDigiLockerTokenEwalletResponse(response);
+		strTeacherData=objAPIview.getTeacherData();
+		strMeriPehchanID=objAPIview.getMeripehchanID();
 		boolean success=objAPIview.getSuccessMessage();
 		objcommonMethodsView.validateSuccessmessage(success);
 		strTokenTeacher = objAPIview.getToken();
 		strAccessToken = objAPIview.getAccessToken();
 		strDIDTeacher = objAPIview.getDID();
 	}
-	@Title("Verify user is able to generate uuid for portal")
-	@Description("Verify user is able to generate uuid for portal")
-	@Test(priority = 4)
-	public void API_04_VerifyUserIsAbleToGenerateUuidPortal() {
-		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
-		objAPIview.setDigiLockerAdharRequest(getConfig().getProperty("digiacc_portal"),getConfig().getProperty("strAdharName"),
-				getConfig().getProperty("strAdhargender"),getConfig().getProperty("strAdharDob"),getConfig().getProperty("strdigilockerID"));
-
-		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerAdharRequest()).when()
-				.post(ApiResreqURL.valueOf("postDigilockerAadhaarPortal").returnResourcePath()).then().extract().response();
-		
-		String actResponseCode=getConfig().getProperty("StatusCodeOK");
-		objcommonMethodsView.validateStatusCode(response, actResponseCode);
-		objAPIview.getDigiLockerAdharEwalletResponse(response);
-		boolean success=objAPIview.getSuccessMessageAdhar();
-		objcommonMethodsView.validateSuccessmessage(success);
-		strUuid = objAPIview.getUuid();
-	}
+//	@Title("Verify user is able to generate uuid for portal")
+//	@Description("Verify user is able to generate uuid for portal")
+//	@Test(priority = 4)
+//	public void API_04_VerifyUserIsAbleToGenerateUuidPortal() {
+//		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
+//		objAPIview.setDigiLockerAdharRequest(getConfig().getProperty("digiacc_portal"),getConfig().getProperty("strAdharName"),
+//				getConfig().getProperty("strAdhargender"),getConfig().getProperty("strAdharDob"),getConfig().getProperty("strdigilockerID"));
+//
+//		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerAdharRequest()).when()
+//				.post(ApiResreqURL.valueOf("postDigilockerAadhaarPortal").returnResourcePath()).then().extract().response();
+//		
+//		String actResponseCode=getConfig().getProperty("StatusCodeOK");
+//		objcommonMethodsView.validateStatusCode(response, actResponseCode);
+//		objAPIview.getDigiLockerAdharEwalletResponse(response);
+//		boolean success=objAPIview.getSuccessMessageAdhar();
+//		objcommonMethodsView.validateSuccessmessage(success);
+//		strUuid = objAPIview.getUuid();
+//	}
 	@Title("Get State List")
 	@Description("Get State List")
 	@Test(priority = 5)
@@ -197,6 +205,7 @@ public class DigilockerportalTest extends BaseTest {
 				.get(ApiResreqURL.valueOf("getSchoolDetails").returnResourcePath()).then().extract().response();
 
 		objAPIview.getSchoolDetailsResponse(response);
+		strSchoolDetails =objAPIview.getSchoolDetails();
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		boolean success =objAPIview.getSuccessSchoolDetails();
 		objcommonMethodsView.validateSuccessmessage(success);
@@ -267,5 +276,19 @@ public class DigilockerportalTest extends BaseTest {
 		objAPIview.getDigiLockerDashboardCountResponse(response);
 		boolean success= objAPIview.getSuccessMessageDashboardCount();
 		objcommonMethodsView.validateSuccessmessage(success);
+	}
+	
+	@Title("Verify user is able to register Teacher")
+	@Description("Verify user is able to register Teacher")
+	@Test(priority = 13)
+	public void API_13_VerifyUserIsAbleToRegisterTeacher() {
+		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
+		objAPIview.setDigiLockerRegisterTeacherRequest(getConfig().getProperty("digiacc_portal"),strTeacherData,strSchoolDetails,strMeriPehchanID);
+
+		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerRegisterTeacherRequest()).when()
+				.post(ApiResreqURL.valueOf("postRegisterTeacher").returnResourcePath()).then().extract().response();
+		String actResponseCode=getConfig().getProperty("StatusCodeOK");
+		objAPIview.getRegisterTeacherResponse(response);
+		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 	}
 }

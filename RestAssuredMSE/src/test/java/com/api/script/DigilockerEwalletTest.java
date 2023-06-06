@@ -3,6 +3,11 @@ package com.api.script;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
+
+import java.util.ArrayList;
+
+import com.api.pojoResponse.Detail;
+import com.api.pojoResponse.UserData;
 import com.api.view.APIview;
 import com.api.view.commonMethodsView;
 import com.generic.ApiResreqURL;
@@ -26,10 +31,14 @@ public class DigilockerEwalletTest extends BaseTest{
 	public static String strDistrictCode;
 	String strBlockCode;
 	public static String strUdiseCode;
+	private ArrayList<UserData> strUserData;
+	private Detail strStudentDetail;
 
 	//Initialize
 	private APIview objAPIview= new APIview(this);
 	private commonMethodsView objcommonMethodsView= new commonMethodsView(this);
+	private String strMeriPehchanID;
+	
 
 	@BeforeClass
 	public void initializeEnvironment() {
@@ -72,6 +81,9 @@ public class DigilockerEwalletTest extends BaseTest{
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 		objAPIview.getDigiLockerTokenEwalletResponse(response);
 		objAPIview.getSuccessMessage();
+		strUserData =objAPIview.getStudentUserData();
+		strMeriPehchanID = objAPIview.getMeripehchanID();
+		strStudentDetail=objAPIview.getStudentDetail();
 		strTokenStudent = objAPIview.getToken();
 		strAccessToken = objAPIview.getAccessToken();
 		strDIDStudent = objAPIview.getDID();
@@ -209,21 +221,18 @@ public class DigilockerEwalletTest extends BaseTest{
 		objAPIview.getDigiLockerTokenEwalletResponse(response);
 	}
 	
-//	@Title("Verify user is able to register student")
-//	@Description("Verify user is able to register student")
-//	@Test(priority = 12)
-//	public void API_12_VerifyUserIsAbleToRegisterStudent() {
-//		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
-//		objAPIview.setDigiLockerRegisterStudentRequest();
-//
-//		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerRegisterStudentRequest()).when()
-//				.post(ApiResreqURL.valueOf("GetDistrictList").returnResourcePath()).then().extract().response();
-//
-//		String actResponseCode=getConfig().getProperty("StatusCodeOK");
-//		objAPIview.getListResponse(response);
-//		objcommonMethodsView.validateStatusCode(response, actResponseCode);
-//		objAPIview.getStatus();
-//		strDistrictCode =objAPIview.getDistrictCode();
-//	}
+	@Title("Verify user is able to register student")
+	@Description("Verify user is able to register student")
+	@Test(priority = 12)
+	public void API_12_VerifyUserIsAbleToRegisterStudent() {
+		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
+		objAPIview.setDigiLockerRegisterStudentRequest(getConfig().getProperty("digiacc"),strUserData,strStudentDetail,strMeriPehchanID);
+
+		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerRegisterStudentRequest()).when()
+				.post(ApiResreqURL.valueOf("postRegisterEwallet").returnResourcePath()).then().extract().response();
+		String actResponseCode=getConfig().getProperty("StatusCodeOK");
+		objAPIview.getRegisterEwalletResponse(response);
+		objcommonMethodsView.validateStatusCode(response, actResponseCode);
+	}
 	
 }

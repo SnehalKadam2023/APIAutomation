@@ -10,16 +10,24 @@ import com.api.pojoRequests.DigiLockerLogoutRequest;
 import com.api.pojoRequests.DigiLockerRequest;
 import com.api.pojoRequests.DigiLockerSchoolListRequest;
 import com.api.pojoRequests.Requestbody;
+import com.api.pojoRequests.Student;
+import com.api.pojoRequests.Studentdetail;
 import com.api.pojoRequests.Subject;
+import com.api.pojoRequests.TeacherRegisterPortalrequest;
+import com.api.pojoRequests.UserDataTeacher;
+import com.api.pojoRequests.Userdata;
 import com.api.pojoRequests.countFields;
 import com.api.pojoRequests.digilockerAdharRequest;
 import com.api.pojoRequests.digilockerBlockListRequest;
 import com.api.pojoRequests.digilockerDistrictListRequest;
+import com.api.pojoRequests.digilockerRegisterEwalletRequest;
+import com.api.pojoRequests.getTokenRequest;
 import com.api.pojoRequests.portalVerifyUdiseRequest;
 import com.api.pojoResponse.BffCredentialsSearchStudentsresponse;
 import com.api.pojoResponse.BffGetRenderSchemaResponse;
 import com.api.pojoResponse.BffGetSchemaIDResponse;
 import com.api.pojoResponse.BffGetSchemaTemplateResponse;
+import com.api.pojoResponse.Detail;
 import com.api.pojoResponse.DigiLockerTokenEwalletResponse;
 import com.api.pojoResponse.DigilockerAdharEwalletResponse;
 import com.api.pojoResponse.DigilockerGetDashboardResponse;
@@ -27,10 +35,13 @@ import com.api.pojoResponse.DigilockerGetStudentDataResponse;
 import com.api.pojoResponse.DigilockerSchoolListResponse;
 import com.api.pojoResponse.DigilockerStateListResponse;
 import com.api.pojoResponse.ResultRenderSchema;
+import com.api.pojoResponse.ResultSchoolData;
 import com.api.pojoResponse.ResultSearchStudent;
 import com.api.pojoResponse.SchoolDetailsResponse;
 import com.api.pojoResponse.URLpage;
 import com.api.pojoResponse.UdiseVerifyResponse;
+import com.api.pojoResponse.UserData;
+import com.api.pojoResponse.digilockerRegisterResponse;
 import com.api.pojoResponse.negativeResponse;
 import com.generic.Pojo;
 import com.generic.WrapperFunctions;
@@ -38,7 +49,7 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;  
 import com.itextpdf.text.Paragraph;  
 import com.itextpdf.text.pdf.PdfWriter;
-
+import com.api.pojoResponse.getTokenResponse;
 import com.pageFactory.DigiLockerLoginPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
@@ -77,6 +88,11 @@ public class APIview {
 	private BffGetRenderSchemaResponse objBffGetRenderSchemaResponse;
 	private BffCredentialRenderRequest objBffCredentialRenderRequest;
 	private negativeResponse objnegativeResponse;
+	private digilockerRegisterEwalletRequest objdigilockerRegisterEwalletRequest;
+	private digilockerRegisterResponse objdigilockerRegisterResponse;
+	private TeacherRegisterPortalrequest objTeacherRegisterPortalrequest;
+	private getTokenRequest objgetTokenRequest;
+	private getTokenResponse objgetTokenResponse;
 
 	public APIview(Pojo pojo) {
 		this.objPojo = pojo;
@@ -106,6 +122,12 @@ public class APIview {
 		objBffGetRenderSchemaResponse = new BffGetRenderSchemaResponse();
 		objBffCredentialRenderRequest = new BffCredentialRenderRequest();
 		objnegativeResponse = new negativeResponse();
+		objdigilockerRegisterEwalletRequest = new digilockerRegisterEwalletRequest();
+		objdigilockerRegisterResponse = new digilockerRegisterResponse();
+		objTeacherRegisterPortalrequest = new TeacherRegisterPortalrequest();
+		objgetTokenRequest = new getTokenRequest();
+		objgetTokenResponse = new getTokenResponse();
+		
 	}
 
 	/**
@@ -187,6 +209,14 @@ public class APIview {
 		String strToken = objDigiLockerTokenEwalletResponse.getToken();
 		objWrapperFunctions.logReporter("Get Token ", strToken, true);
 		return strToken;
+	}
+	public String getMeripehchanID() {
+		String strMeriPehchanID = objDigiLockerTokenEwalletResponse.getResult().getMeripehchanid();
+		return strMeriPehchanID;
+	}
+	public ArrayList<UserData> getTeacherData() {
+		ArrayList<UserData> strTeacherData = objDigiLockerTokenEwalletResponse.getUserData();
+		return strTeacherData;
 	}
 	public boolean getSuccessMessage() {
 		boolean strSuccess = objDigiLockerTokenEwalletResponse.getSuccess();
@@ -526,7 +556,7 @@ public class APIview {
 		String str = this.createAPIFromPojo(objportalVerifyUdiseRequest);
 		objWrapperFunctions.logReporter("Set Request:", str, true);	
 	}
-	
+
 	public void setUdiseVerifyNegativeRequest(String password, String strUdiseCode) {
 		strUdiseCode= strUdiseCode + objWrapperFunctions.getRandomStringWithNumbers(1);
 		objportalVerifyUdiseRequest.setPassword(password);
@@ -566,6 +596,11 @@ public class APIview {
 			e.printStackTrace();
 		}
 		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);	
+	}
+
+	public ResultSchoolData getSchoolDetails() {
+		ResultSchoolData strSchoolDetails = objSchoolDetailsResponse.getResult();
+		return strSchoolDetails;
 	}
 
 	public boolean getSuccessSchoolDetails() {
@@ -658,20 +693,6 @@ public class APIview {
 	public void pdfFileDownload(String response) throws IOException, Exception {
 		//		Document doc = new Document();  
 		File outputImageFile = new File("C:\\Users\\SNEHAL\\Desktop\\tekdi workspace\\RestAssuredMSE\\src\\test\\resources\\download\\ID.pdf");
-		//		OutputStream outStream = new FileOutputStream(outputImageFile);
-		////		String decoded = new String(Base64.getDecoder().decode(response));
-		//		
-		//		
-		////		PdfWriter writer = PdfWriter.getInstance(doc,outStream);
-		////		 
-		////		doc.open();
-		////		doc.add(response);
-		////		System.out.println("decoded base64::::::"+decoded);
-		//		outStream.write(response);
-		//        outStream.close();
-		////		doc.close();  
-		////		writer.close();  
-
 		try ( FileOutputStream fos = new FileOutputStream(outputImageFile); ) {
 			// To be short I use a corrupted PDF string, so make sure to use a valid one if you want to preview the PDF file
 			//String b64 = "JVBERi0xLjUKJYCBgoMKMSAwIG9iago8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvRmlyc3QgMTQxL04gMjAvTGVuZ3==";
@@ -693,7 +714,7 @@ public class APIview {
 		}
 		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
 	}
-	
+
 	public boolean getFalseMessage() {
 		boolean strSuccess = objnegativeResponse.getStatus();
 		objWrapperFunctions.logReporterFalseScenario("Get Success message ", strSuccess);
@@ -701,11 +722,92 @@ public class APIview {
 
 	}
 
-	public void setDigiLockerRegisterStudentRequest() {
-		
+	public ArrayList<UserData> getStudentUserData() {
+		ArrayList<UserData> strUserData = objDigiLockerTokenEwalletResponse.getUserData();
+		return strUserData;
+	}
+	public Detail getStudentDetail() {
+		Detail strStudentDetail = objDigiLockerTokenEwalletResponse.getDetail();
+		return strStudentDetail;
+	}
+
+	public void setDigiLockerRegisterStudentRequest(String strDigiacc, ArrayList<UserData> strUserData,
+			Detail strStudentDetail, String strMeriPehchanID) {
+
+		objdigilockerRegisterEwalletRequest.setDigiacc(strDigiacc);
+		Userdata userData=new Userdata();
+		userData.setStudent(strUserData);
+		objdigilockerRegisterEwalletRequest.setUserdata(userData);
+		userData.setStudentdetail(strStudentDetail);
+		objdigilockerRegisterEwalletRequest.setUserdata(userData);
+		objdigilockerRegisterEwalletRequest.setDigimpid(strMeriPehchanID);
+		String str = this.createAPIFromPojo(objdigilockerRegisterEwalletRequest);
+		objWrapperFunctions.logReporter("Set Request:", str, true);
+
+	}
+	public digilockerRegisterEwalletRequest getDigiLockerRegisterStudentRequest() {
+		return objdigilockerRegisterEwalletRequest;	
+	}
+
+	public void getRegisterEwalletResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			objdigilockerRegisterResponse=objMapper.readValue(response.asString(),digilockerRegisterResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+
+	}
+
+	public void setDigiLockerRegisterTeacherRequest(String strDigiacc, ArrayList<UserData> strTeacherData,
+			ResultSchoolData strSchoolDetails,String strMeriPehchanID) {
+		objTeacherRegisterPortalrequest.setDigiacc(strDigiacc);
+		UserDataTeacher userData=new UserDataTeacher();
+		userData.setTeacher(strTeacherData);
+		objTeacherRegisterPortalrequest.setUserdata(userData);
+		userData.setSchool(strSchoolDetails);
+		objTeacherRegisterPortalrequest.setUserdata(userData);
+		objTeacherRegisterPortalrequest.setDigimpid(strMeriPehchanID);
+		String str = this.createAPIFromPojo(objTeacherRegisterPortalrequest);
+		objWrapperFunctions.logReporter("Set Request:", str, true);
+
+	}
+
+	public TeacherRegisterPortalrequest getDigiLockerRegisterTeacherRequest() {
+		return objTeacherRegisterPortalrequest;
+	}
+
+	public void getRegisterTeacherResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			//need to create response class for register teacher(previous API is getting failed)
+			objdigilockerRegisterResponse=objMapper.readValue(response.asString(),digilockerRegisterResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);	
+	}
+
+	public void setGetTokenRequest(String strPassword) {
+		objgetTokenRequest.setPassword(strPassword);
+		String str = this.createAPIFromPojo(objgetTokenRequest);
+		objWrapperFunctions.logReporter("Set Request:", str, true);
+	}
+	public getTokenRequest GetTokenRequest() {
+		return objgetTokenRequest;
+	}
+
+	public void getTokenResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			objgetTokenResponse=objMapper.readValue(response.asString(),getTokenResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
 		
 	}
-	
 }
 
 

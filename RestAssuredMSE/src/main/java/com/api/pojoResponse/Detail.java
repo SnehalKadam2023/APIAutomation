@@ -1,14 +1,15 @@
 package com.api.pojoResponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Detail {
 	private String student_detail_id;
 	private String student_id;
 	private String gaurdian_name;
-	private String school_udise;
-	private String school_name;
+//	private String school_udise;
+//	private String school_name;
 	private String grade;
 	private String acdemic_year;
 	private String start_date;
@@ -19,6 +20,7 @@ public class Detail {
 	private String osCreatedBy;
 	private String osUpdatedBy;
 	private String osid;
+	@JsonProperty("@type")
 	private String type;
 
 
@@ -36,13 +38,13 @@ public class Detail {
 		return gaurdian_name;
 	}
 
-	public String getSchool_udise() {
-		return school_udise;
-	}
-
-	public String getSchool_name() {
-		return school_name;
-	}
+//	public String getSchool_udise() {
+//		return school_udise;
+//	}
+//
+//	public String getSchool_name() {
+//		return school_name;
+//	}
 
 	public String getGrade() {
 		return grade;
@@ -104,13 +106,13 @@ public class Detail {
 		this.gaurdian_name = gaurdian_name;
 	}
 
-	public void setSchool_udise(String school_udise) {
-		this.school_udise = school_udise;
-	}
-
-	public void setSchool_name(String school_name) {
-		this.school_name = school_name;
-	}
+//	public void setSchool_udise(String school_udise) {
+//		this.school_udise = school_udise;
+//	}
+//
+//	public void setSchool_name(String school_name) {
+//		this.school_name = school_name;
+//	}
 
 	public void setGrade(String grade) {
 		this.grade = grade;

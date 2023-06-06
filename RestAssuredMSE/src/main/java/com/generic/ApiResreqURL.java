@@ -24,7 +24,9 @@ public enum ApiResreqURL {
 	getRenderSchema("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/schema/json/{credentialSchemaID}"),
 	getRenderSchemaTemplate("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/rendertemplateschema/{credentialSchemaID}"),
 	postRenderCredentials("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/render"),
-	postRegisterEwallet("https://ulp.uniteframework.io/registry/api/v1/StudentDetail/invite");
+	postRegisterEwallet("https://ulp.uniteframework.io/registry/api/v1/StudentDetail/invite"),
+	postRegisterTeacher("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/register"),
+	getToken("https://ulp.uniteframework.io/ulp-bff/v1/sbrc/token");
 	
 	private String strReturn;
 	

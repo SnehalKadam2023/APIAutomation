@@ -2,6 +2,7 @@ package com.api.pojoResponse;
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 public class DigiLockerTokenEwalletResponse {
@@ -12,6 +13,7 @@ public class DigiLockerTokenEwalletResponse {
 	Digi DigiObject;
 	private String user;
 	ArrayList<UserData> userData = new ArrayList<UserData>();
+	@JsonProperty("detail")
 	Detail DetailObject;
 	private String token;
 

@@ -1,6 +1,7 @@
 package com.api.pojoResponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserData {
@@ -21,6 +22,7 @@ public class UserData {
 	private String osCreatedBy;
 	private String osUpdatedBy;
 	private String osid;
+	@JsonProperty("@type")
 	private String type;
 
 
