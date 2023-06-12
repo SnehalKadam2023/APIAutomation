@@ -1,7 +1,10 @@
 package com.api.pojoRequests;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Student {
 	private String student_id;
+	@JsonProperty("DID")
 	private String DID;
 	private String reference_id;
 	private String aadhar_token;

@@ -30,7 +30,8 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 	//Initialize
 	private APIview objAPIview= new APIview(this);
 	private commonMethodsView objcommonMethodsView= new commonMethodsView(this);
-	private DigilockerportalTest objDigilockerportalTest= new DigilockerportalTest();
+	private DigilockerEwalletTest objDigilockerEwalletTest= new DigilockerEwalletTest();
+	private DigilockerportalTest objDigilockerportalTest = new DigilockerportalTest();
 	
 	@BeforeClass
 	public void initializeEnvironment() {
@@ -91,7 +92,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 	@Test(priority = 4)
 	public void API_04_VerifyUserIsAbleToGetBlockList() {
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
-		objAPIview.setDigiLockerNegativeBlockRequest(objDigilockerportalTest.strDistrictCode);
+		objAPIview.setDigiLockerNegativeBlockRequest(objDigilockerEwalletTest.strDistrictCode);
 
 		Response response = given().spec(reqSpec).body(objAPIview.getdigilockerBlockListRequest()).when()
 				.post(ApiResreqURL.valueOf("GetBlockList").returnResourcePath()).then().extract().response();
@@ -108,7 +109,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 	@Test(priority = 5)
 	public void API_05_VerifyUserIsAbleToGetSchoolList() {
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
-		objAPIview.setDigiLockerSchoolListRequest(getConfig().getProperty("strRegionType"),objDigilockerportalTest.strDistrictCode,getConfig().getProperty("strSortBy"));
+		objAPIview.setDigiLockerSchoolListRequest(getConfig().getProperty("strRegionType"),objDigilockerEwalletTest.strDistrictCode,getConfig().getProperty("strSortBy"));
 
 		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerSchoolListRequest()).when()
 				.post(ApiResreqURL.valueOf("getSchoolList").returnResourcePath()).then().extract().response();
@@ -125,7 +126,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 	@Test(priority = 6)
 	public void API_06_VerifyUserIsAbleToVerifyUdiseDetails() {
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
-		objAPIview.setUdiseVerifyNegativeRequest(getConfig().getProperty("Password"),objDigilockerportalTest.strUdiseCode);
+		objAPIview.setUdiseVerifyNegativeRequest(getConfig().getProperty("Password"),objDigilockerportalTest.strUdiseCodeRegister);
 
 		Response response = given().spec(reqSpec).body(objAPIview.getUdiseVerifyRequest()).when()
 				.post(ApiResreqURL.valueOf("getUdiseVerify").returnResourcePath()).then().extract().response();

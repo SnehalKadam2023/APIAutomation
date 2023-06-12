@@ -1,6 +1,7 @@
 package com.api.pojoResponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -9,8 +10,10 @@ public class Data {
 	private String stateCode;
 	private String stateName;
 	private String districtCode;
+    @JsonProperty("districtName")
 	private String districtName;
 	private String blockCode;
+	@JsonProperty("blockName")
 	private String blockName;
 
 	public String getBlockCode() {

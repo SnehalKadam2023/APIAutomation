@@ -13,8 +13,11 @@
 	<test name="ULP BFF">
 		<classes>
 			<class name="com.api.script.DigilockerEwalletTest" />
+			<!--<class name="com.api.script.DigilockerEwalletNegativeTest" />-->
+			<class name="com.api.script.DigilockerportalTest" /> 
+			<!--<class name="com.api.script.DigilockerPortalNegativeTest" />
 			<class name="com.api.script.DigilockerBFFCredentialsTest" />
-			
+			<class name="com.api.script.SBRCTest" />-->		
 		</classes>
 	</test>
 

@@ -6,43 +6,59 @@ import java.io.IOException;
 import java.io.OutputStream;
 import com.api.pojoRequests.BffCredentialRenderRequest;
 import com.api.pojoRequests.BffSearchStudentRequest;
+import com.api.pojoRequests.Claim_status;
+import com.api.pojoRequests.CredentialSubject;
+import com.api.pojoRequests.DeleteStudentRequest;
 import com.api.pojoRequests.DigiLockerLogoutRequest;
 import com.api.pojoRequests.DigiLockerRequest;
 import com.api.pojoRequests.DigiLockerSchoolListRequest;
 import com.api.pojoRequests.Requestbody;
+import com.api.pojoRequests.SearchStudentRequest;
 import com.api.pojoRequests.Student;
 import com.api.pojoRequests.Studentdetail;
 import com.api.pojoRequests.Subject;
 import com.api.pojoRequests.TeacherRegisterPortalrequest;
 import com.api.pojoRequests.UserDataTeacher;
-import com.api.pojoRequests.Userdata;
+import com.api.pojoRequests.UserdataRegister;
+import com.api.pojoRequests.VcData;
+import com.api.pojoRequests.Filter;
+import com.api.pojoRequests.Student_name;
 import com.api.pojoRequests.countFields;
 import com.api.pojoRequests.digilockerAdharRequest;
 import com.api.pojoRequests.digilockerBlockListRequest;
 import com.api.pojoRequests.digilockerDistrictListRequest;
 import com.api.pojoRequests.digilockerRegisterEwalletRequest;
+import com.api.pojoRequests.filters;
 import com.api.pojoRequests.getTokenRequest;
 import com.api.pojoRequests.portalVerifyUdiseRequest;
+import com.api.pojoRequests.searchStudentForApprovalRequest;
 import com.api.pojoResponse.BffCredentialsSearchStudentsresponse;
 import com.api.pojoResponse.BffGetRenderSchemaResponse;
 import com.api.pojoResponse.BffGetSchemaIDResponse;
 import com.api.pojoResponse.BffGetSchemaTemplateResponse;
 import com.api.pojoResponse.Detail;
 import com.api.pojoResponse.DigiLockerTokenEwalletResponse;
+import com.api.pojoResponse.DigiLockerTokenPortalResponse;
 import com.api.pojoResponse.DigilockerAdharEwalletResponse;
 import com.api.pojoResponse.DigilockerGetDashboardResponse;
 import com.api.pojoResponse.DigilockerGetStudentDataResponse;
 import com.api.pojoResponse.DigilockerSchoolListResponse;
 import com.api.pojoResponse.DigilockerStateListResponse;
+import com.api.pojoResponse.GetTokenEwalletDIDResponse;
 import com.api.pojoResponse.ResultRenderSchema;
 import com.api.pojoResponse.ResultSchoolData;
 import com.api.pojoResponse.ResultSearchStudent;
+import com.api.pojoResponse.SBRCDeleteStudentResponse;
+import com.api.pojoResponse.SBRCSearchStudentResponse;
+import com.api.pojoResponse.SBRCSearchTeacherResponse;
 import com.api.pojoResponse.SchoolDetailsResponse;
 import com.api.pojoResponse.URLpage;
 import com.api.pojoResponse.UdiseVerifyResponse;
 import com.api.pojoResponse.UserData;
+import com.api.pojoResponse.UserDataPortal;
 import com.api.pojoResponse.digilockerRegisterResponse;
 import com.api.pojoResponse.negativeResponse;
+import com.generic.BaseTest;
 import com.generic.Pojo;
 import com.generic.WrapperFunctions;
 import com.itextpdf.text.Document;  
@@ -60,6 +76,8 @@ import java.util.Base64;
 import io.restassured.response.Response;
 
 public class APIview {
+
+	int iDistrict;
 
 	private Pojo objPojo;
 	private URLpage objURLpage;
@@ -93,6 +111,15 @@ public class APIview {
 	private TeacherRegisterPortalrequest objTeacherRegisterPortalrequest;
 	private getTokenRequest objgetTokenRequest;
 	private getTokenResponse objgetTokenResponse;
+	private SearchStudentRequest objSearchStudentRequest;
+	private SBRCSearchStudentResponse objSBRCSearchStudentResponse;
+	private DeleteStudentRequest objDeleteStudentRequest;
+	private DigiLockerTokenPortalResponse objDigiLockerTokenPortalResponse;
+	private SBRCDeleteStudentResponse objSBRCDeleteStudentResponse;
+	private BaseTest objBaseTest;
+	private GetTokenEwalletDIDResponse objGetTokenEwalletDIDResponse;
+	private searchStudentForApprovalRequest objsearchStudentForApprovalRequest;
+	private SBRCSearchTeacherResponse objSBRCSearchTeacherResponse;
 
 	public APIview(Pojo pojo) {
 		this.objPojo = pojo;
@@ -127,7 +154,15 @@ public class APIview {
 		objTeacherRegisterPortalrequest = new TeacherRegisterPortalrequest();
 		objgetTokenRequest = new getTokenRequest();
 		objgetTokenResponse = new getTokenResponse();
-		
+		objSearchStudentRequest = new SearchStudentRequest();
+		objSBRCSearchStudentResponse = new SBRCSearchStudentResponse();
+		objDeleteStudentRequest = new DeleteStudentRequest();
+		objDigiLockerTokenPortalResponse = new DigiLockerTokenPortalResponse();
+		objSBRCDeleteStudentResponse = new SBRCDeleteStudentResponse();
+		objGetTokenEwalletDIDResponse = new GetTokenEwalletDIDResponse();
+		objsearchStudentForApprovalRequest = new searchStudentForApprovalRequest();
+		objBaseTest = new BaseTest();
+		objSBRCSearchTeacherResponse = new SBRCSearchTeacherResponse();
 	}
 
 	/**
@@ -204,6 +239,43 @@ public class APIview {
 		}
 		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
 	}
+//	public String getOsidSchool() {
+//		String strosid = objDigiLockerTokenEwalletResponse.getDetail().getOsid();
+//		objWrapperFunctions.logReporter("get school osid",strosid , true);
+//		return strosid;
+//	}
+	
+	public void getDigiLockerTokenEwalletDIDResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			objGetTokenEwalletDIDResponse=objMapper.readValue(response.asString(), GetTokenEwalletDIDResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
+	public String getStudentName() {
+		String strStudentName = objDigiLockerTokenEwalletResponse.getResult().getName();
+		objWrapperFunctions.logReporter("Get StudentName ", strStudentName, true);
+		return strStudentName;
+	}
+	public String getmobileNo() {
+		String strmobileNo = objDigiLockerTokenEwalletResponse.getResult().getMobile();
+		objWrapperFunctions.logReporter("Get StudentName ", strmobileNo, true);
+		return strmobileNo;
+	}
+	public String getDOB() {
+		String strDOB = objDigiLockerTokenEwalletResponse.getResult().getDob();
+		objWrapperFunctions.logReporter("Get StudentName ", strDOB, true);
+		return strDOB;
+	}
+
+	public String getGender() {
+		String strGender = objDigiLockerTokenEwalletResponse.getResult().getGender();
+		objWrapperFunctions.logReporter("Get StudentName ", strGender, true);
+		return strGender;
+	}
 
 	public String getToken() {
 		String strToken = objDigiLockerTokenEwalletResponse.getToken();
@@ -214,13 +286,10 @@ public class APIview {
 		String strMeriPehchanID = objDigiLockerTokenEwalletResponse.getResult().getMeripehchanid();
 		return strMeriPehchanID;
 	}
-	public ArrayList<UserData> getTeacherData() {
-		ArrayList<UserData> strTeacherData = objDigiLockerTokenEwalletResponse.getUserData();
-		return strTeacherData;
-	}
+
 	public boolean getSuccessMessage() {
 		boolean strSuccess = objDigiLockerTokenEwalletResponse.getSuccess();
-		objWrapperFunctions.logReporter("Get Success ", strSuccess);
+		//		objWrapperFunctions.logReporter("Get Success ", strSuccess);
 		return strSuccess;
 	}
 	public boolean getFailedMessage() {
@@ -233,12 +302,86 @@ public class APIview {
 		objWrapperFunctions.logReporter("Get Access Token ", strAccesstoken, true);
 		return strAccesstoken;
 	}
-
 	public String getDID() {
-		String strDID=objDigiLockerTokenEwalletResponse.getUserData().get(0).getDID();
+		String strDID=objGetTokenEwalletDIDResponse.getUserData().get(0).getDID();
 		objWrapperFunctions.logReporter("Get DID ", strDID, true);
 		return strDID;
 	}
+	public boolean getSuccessMessageDID() {
+		boolean strSuccess = objGetTokenEwalletDIDResponse.getSuccess();
+		objWrapperFunctions.logReporter("Get Success ", strSuccess);
+		return strSuccess;
+	}
+
+	//Teacher
+	public void getDigiLockerTokenPortalResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			objDigiLockerTokenPortalResponse=objMapper.readValue(response.asString(), DigiLockerTokenPortalResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
+	public String getmobileNoPortal() {
+		String strmobileNo = objDigiLockerTokenPortalResponse.getResult().getMobile();
+		objWrapperFunctions.logReporter("Get StudentName ", strmobileNo, true);
+		return strmobileNo;
+	}
+	public String getDOBPortal() {
+		String strDOB = objDigiLockerTokenPortalResponse.getResult().getDob();
+		objWrapperFunctions.logReporter("Get StudentName ", strDOB, true);
+		return strDOB;
+	}
+
+	public String getGenderPortal() {
+		String strGender = objDigiLockerTokenPortalResponse.getResult().getGender();
+		objWrapperFunctions.logReporter("Get StudentName ", strGender, true);
+		return strGender;
+	}
+	public String getTeacherName() {
+		String strName = objDigiLockerTokenPortalResponse.getResult().getName();
+		objWrapperFunctions.logReporter("Get Teacher Name ", strName, true);
+		return strName;
+	}
+	public String getudise() {
+		String strudise = objDigiLockerTokenPortalResponse.getUserData().getTeacher().getSchoolUdise();
+		objWrapperFunctions.logReporter("Get udise ", strudise, true);
+		return strudise;
+	}
+	public String getMeripehchanIDPortal() {
+		String strMeriPehchanID = objDigiLockerTokenPortalResponse.getResult().getMeripehchanid();
+		return strMeriPehchanID;
+	}
+
+	public String getTokenTeacher() {
+		String strToken = objDigiLockerTokenPortalResponse.getToken();
+		objWrapperFunctions.logReporter("Get Token ", strToken, true);
+		return strToken;
+	}
+	public String getDIDTeacher() {
+		String strDID=objDigiLockerTokenPortalResponse.getUserData().getTeacher().getDid();
+		objWrapperFunctions.logReporter("Get DID teacher", strDID, true);
+		return strDID;
+	}
+
+	public String getDIDSchool() {
+		String strDID=objDigiLockerTokenPortalResponse.getUserData().getSchool().getDid();
+		objWrapperFunctions.logReporter("Get DID school", strDID, true);
+		return strDID;
+	}
+	public String getAccessTokenTeacher() {
+		String strAccesstoken = objDigiLockerTokenPortalResponse.getDigi().getAccess_token();
+		objWrapperFunctions.logReporter("Get Access Token ", strAccesstoken, true);
+		return strAccesstoken;
+	}
+	public boolean getSuccessMessagePortal() {
+		boolean strSuccess = objDigiLockerTokenPortalResponse.getSuccess();
+		//		objWrapperFunctions.logReporter("Get Success ", strSuccess);
+		return strSuccess;
+	}
+
 	/**
 	 *Author: Snehal kadam
 	 *API_03_VerifyUserIsAbleToGenerateToken
@@ -333,6 +476,12 @@ public class APIview {
 		return strStateCode;
 
 	}
+	public String getStateName() {
+		String strStateCode = objDigilockerStateListResponse.getResponse().getData().get(21).getStateName();
+		objWrapperFunctions.logReporter("Get State Code ", strStateCode, true);
+		return strStateCode;
+
+	}
 
 
 	/**
@@ -356,7 +505,15 @@ public class APIview {
 	}
 
 	public String getDistrictCode() {
-		String strDistrictCode = objDigilockerStateListResponse.getResponse().getData().get(2).getDistrictCode();
+		String str=objWrapperFunctions.getRandomStringWithNumbers(1);
+		iDistrict=Integer.parseInt(str);  
+		String strDistrictCode = objDigilockerStateListResponse.getResponse().getData().get(iDistrict).getDistrictCode();
+		objWrapperFunctions.logReporter("Get District Code ", strDistrictCode, true);
+		return strDistrictCode;
+
+	}
+	public String getDistrictName() {
+		String strDistrictCode = objDigilockerStateListResponse.getResponse().getData().get(iDistrict).getDistrictName();
 		objWrapperFunctions.logReporter("Get District Code ", strDistrictCode, true);
 		return strDistrictCode;
 
@@ -378,11 +535,17 @@ public class APIview {
 	}
 
 	public String getBlockCode() {
-		String strDistrictCode = objDigilockerStateListResponse.getResponse().getData().get(0).getBlockCode();
+		String strDistrictCode = objDigilockerStateListResponse.getResponse().getData().get(iDistrict).getBlockCode();
 		objWrapperFunctions.logReporter("Get Block Code ", strDistrictCode, true);
 		return strDistrictCode;
 
-	}	// TODO Auto-generated method stub
+	}
+	public String getBlockName() {
+		String strDistrictCode = objDigilockerStateListResponse.getResponse().getData().get(iDistrict).getBlockName();
+		objWrapperFunctions.logReporter("Get Block Code ", strDistrictCode, true);
+		return strDistrictCode;
+
+	}
 
 	public void setDigiLockerSchoolListRequest(String strRegionType, String strDistrictCode , String strSortBy) {
 		objDigiLockerSchoolListRequest.setRegionType(strRegionType);
@@ -420,7 +583,12 @@ public class APIview {
 		return strStatus;
 	}
 	public String getUdiseCode() {
-		String strUdiseCode = objDigilockerSchoolListResponse.getResponse().getDataSchool().getPagingContent().get(0).getUdiseCode();
+		String strUdiseCode = objDigilockerSchoolListResponse.getResponse().getDataSchool().getPagingContent().get(iDistrict).getUdiseCode();
+		objWrapperFunctions.logReporter("Get Udise Code ", strUdiseCode, true);
+		return strUdiseCode;
+	}
+	public String getSchoolName() {
+		String strUdiseCode = objDigilockerSchoolListResponse.getResponse().getDataSchool().getPagingContent().get(iDistrict).getSchoolName();
 		objWrapperFunctions.logReporter("Get Udise Code ", strUdiseCode, true);
 		return strUdiseCode;
 	}
@@ -452,6 +620,12 @@ public class APIview {
 			e.printStackTrace();
 		}
 		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
+	public String getStudentOsid() {
+		String strosid = objSBRCSearchStudentResponse.getResult().get(0).getOsid();
+		objWrapperFunctions.logReporter("Get OSID ", strosid, true);
+		return strosid;
 	}
 
 	public boolean getSuccessMessageStudentData() {
@@ -521,6 +695,7 @@ public class APIview {
 		objWrapperFunctions.logReporter("Get Credentials ID ", strCredentialsID, true);
 		return strCredentialsID;
 	}
+	
 	public ResultSearchStudent getResultCredentials() {
 		ResultSearchStudent ResultSearchStudent = objBffCredentialsSearchStudentsresponse.getResult().get(0);
 		//		ArrayList<ResultSearchStudent> strCredentialsID = new ArrayList<ResultSearchStudent>();
@@ -598,10 +773,12 @@ public class APIview {
 		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);	
 	}
 
-	public ResultSchoolData getSchoolDetails() {
-		ResultSchoolData strSchoolDetails = objSchoolDetailsResponse.getResult();
-		return strSchoolDetails;
-	}
+
+		public String getOsidSchool() {
+			 String strosid = objSchoolDetailsResponse.getResult().getOsid();
+			 objWrapperFunctions.logReporter("get school OSID:",strosid , true);
+			return strosid;
+		}
 
 	public boolean getSuccessSchoolDetails() {
 		boolean strSuccess = objSchoolDetailsResponse.getSuccess();
@@ -722,32 +899,25 @@ public class APIview {
 
 	}
 
-	public ArrayList<UserData> getStudentUserData() {
-		ArrayList<UserData> strUserData = objDigiLockerTokenEwalletResponse.getUserData();
-		return strUserData;
-	}
 	public Detail getStudentDetail() {
 		Detail strStudentDetail = objDigiLockerTokenEwalletResponse.getDetail();
 		return strStudentDetail;
 	}
 
-	public void setDigiLockerRegisterStudentRequest(String strDigiacc, ArrayList<UserData> strUserData,
-			Detail strStudentDetail, String strMeriPehchanID) {
-
-		objdigilockerRegisterEwalletRequest.setDigiacc(strDigiacc);
-		Userdata userData=new Userdata();
-		userData.setStudent(strUserData);
-		objdigilockerRegisterEwalletRequest.setUserdata(userData);
-		userData.setStudentdetail(strStudentDetail);
-		objdigilockerRegisterEwalletRequest.setUserdata(userData);
-		objdigilockerRegisterEwalletRequest.setDigimpid(strMeriPehchanID);
-		String str = this.createAPIFromPojo(objdigilockerRegisterEwalletRequest);
-		objWrapperFunctions.logReporter("Set Request:", str, true);
-
-	}
-	public digilockerRegisterEwalletRequest getDigiLockerRegisterStudentRequest() {
-		return objdigilockerRegisterEwalletRequest;	
-	}
+	//	public void setDigiLockerRegisterStudentRequest(String strDigiacc, ArrayList<UserData> strUserData,
+	//			Detail strStudentDetail, String strMeriPehchanID) {
+	//
+	//		objdigilockerRegisterEwalletRequest.setDigiacc(strDigiacc);
+	//		UserdataRegister userData=new UserdataRegister();
+	//		userData.setStudent(strUserData);
+	//		objdigilockerRegisterEwalletRequest.setUserdata(userData);
+	//		userData.setStudentdetail(strStudentDetail);
+	//		objdigilockerRegisterEwalletRequest.setUserdata(userData);
+	//		objdigilockerRegisterEwalletRequest.setDigimpid(strMeriPehchanID);
+	//		String str = this.createAPIFromPojo(objdigilockerRegisterEwalletRequest);
+	//		objWrapperFunctions.logReporter("Set Request register student:", str, true);
+	//
+	//	}
 
 	public void getRegisterEwalletResponse(Response response) {
 		ObjectMapper objMapper= new ObjectMapper();
@@ -760,17 +930,74 @@ public class APIview {
 
 	}
 
-	public void setDigiLockerRegisterTeacherRequest(String strDigiacc, ArrayList<UserData> strTeacherData,
-			ResultSchoolData strSchoolDetails,String strMeriPehchanID) {
-		objTeacherRegisterPortalrequest.setDigiacc(strDigiacc);
-		UserDataTeacher userData=new UserDataTeacher();
-		userData.setTeacher(strTeacherData);
-		objTeacherRegisterPortalrequest.setUserdata(userData);
-		userData.setSchool(strSchoolDetails);
-		objTeacherRegisterPortalrequest.setUserdata(userData);
+	public void setDigiLockerRegisterTeacherRequest(String digiacc, String StudentID,String DID, String strMobileNo,
+			String Adhartoken, String strTeacherName, String strDOB, String SchoolType, String strMeriPehchanID,
+			String username, String strGender, String strUdiseCodeRegister, String strSchoolName, String strStateCode,
+			String strStateName, String strDistrictCode, String strDistrictname, String strBlockCode,
+			String strBolckName) {
+		objTeacherRegisterPortalrequest.setDigiacc(digiacc);
+		UserDataTeacher userDataTeacher=new UserDataTeacher();
+		UserDataPortal teacherObj = new UserDataPortal();
+		teacherObj.setName(strTeacherName);
+		teacherObj.setJoiningdate("2023-06-08");
+		teacherObj.setAadharId(Adhartoken);
+		teacherObj.setSchoolUdise(strUdiseCodeRegister);
+		teacherObj.setMeripehchanLoginId(strMeriPehchanID);
+		teacherObj.setUsername(Adhartoken);
+		teacherObj.setConsent("yes");
+		teacherObj.setConsentDate("2023-06-09");
+		teacherObj.setDid("");
+		teacherObj.setSchool_name(strSchoolName);
+		teacherObj.setStateCode(strStateCode);
+		teacherObj.setStateName(strStateName);
+		teacherObj.setDistrictCode(strDistrictCode);
+		teacherObj.setDistrictName(strDistrictname);
+		teacherObj.setBlockCode(strBlockCode);
+		teacherObj.setBlockName(strBolckName);
+		teacherObj.setMobile(strMobileNo);
+
+		userDataTeacher.setTeacher(teacherObj);
+		objTeacherRegisterPortalrequest.setUserdata(userDataTeacher);
+
+		ResultSchoolData SchoolDetailsObj = new ResultSchoolData();
+		SchoolDetailsObj.setSchoolName(strSchoolName);
+		SchoolDetailsObj.setClientSecret("-");
+		SchoolDetailsObj.setClientId("-");
+		SchoolDetailsObj.setSchoolCategory(1);
+		SchoolDetailsObj.setUdiseCode(strUdiseCodeRegister);
+		SchoolDetailsObj.setSchoolManagementCenter(0);
+		SchoolDetailsObj.setSchoolManagementState(0);
+		SchoolDetailsObj.setSchoolType(3);
+		SchoolDetailsObj.setClassFrom(2);
+		SchoolDetailsObj.setClassTo(10);
+		SchoolDetailsObj.setStateCode(9);
+		SchoolDetailsObj.setStateName(strStateCode);
+		SchoolDetailsObj.setStateName(strStateName);
+		SchoolDetailsObj.setDistrictName(strDistrictname);
+		SchoolDetailsObj.setBlockName(strBolckName);
+		SchoolDetailsObj.setLocationType(1);
+		SchoolDetailsObj.setHeadOfSchoolMobile("-");
+		SchoolDetailsObj.setRespondentMobile("-");
+		SchoolDetailsObj.setAlternateMobile("-");
+		SchoolDetailsObj.setSchoolEmail("-");
+		SchoolDetailsObj.setDid("");
+
+		userDataTeacher.setSchool(SchoolDetailsObj);
+
+		objTeacherRegisterPortalrequest.setUserdata(userDataTeacher);
 		objTeacherRegisterPortalrequest.setDigimpid(strMeriPehchanID);
 		String str = this.createAPIFromPojo(objTeacherRegisterPortalrequest);
-		objWrapperFunctions.logReporter("Set Request:", str, true);
+		objWrapperFunctions.logReporter("Set Request register teacher:", str, true);
+
+		//		objTeacherRegisterPortalrequest.setDigiacc(strDigiacc);
+		//		UserDataTeacher userData=new UserDataTeacher();
+		//		userData.setTeacher(strTeacherData);
+		//		objTeacherRegisterPortalrequest.setUserdata(userData);
+		//		userData.setSchool(strSchoolDetails);
+		//		objTeacherRegisterPortalrequest.setUserdata(userData);
+		//		objTeacherRegisterPortalrequest.setDigimpid(strMeriPehchanID);
+		//		String str = this.createAPIFromPojo(objTeacherRegisterPortalrequest);
+		//		objWrapperFunctions.logReporter("Set Request register teacher:", str, true);
 
 	}
 
@@ -781,7 +1008,6 @@ public class APIview {
 	public void getRegisterTeacherResponse(Response response) {
 		ObjectMapper objMapper= new ObjectMapper();
 		try {
-			//need to create response class for register teacher(previous API is getting failed)
 			objdigilockerRegisterResponse=objMapper.readValue(response.asString(),digilockerRegisterResponse.class);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -806,8 +1032,206 @@ public class APIview {
 			e.printStackTrace();
 		}
 		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
-		
-	}
-}
 
+	}
+	public String getDeleteToken() {
+		String strToken =objgetTokenResponse.getToken();
+		objWrapperFunctions.logReporter("Get delete token: ", strToken, true);
+		return strToken;
+	}
+
+	public void setSearchStudentRequest(String strSchema, String strStudentName) {
+		objSearchStudentRequest.setSchema(strSchema);
+		Filter filterobj = new Filter();
+		objSearchStudentRequest.setFilter(filterobj);
+		Student_name studentNameobj = new Student_name();
+		filterobj.setStudent_name(studentNameobj);
+		studentNameobj.setContains(strStudentName);
+		String str = this.createAPIFromPojo(objSearchStudentRequest);
+		objWrapperFunctions.logReporter("Set Request:", str, true);
+	}
+	public SearchStudentRequest getSearchStudentRequest() {
+		return objSearchStudentRequest;
+	}
+
+	public void getSBRCSearchStudentResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			objSBRCSearchStudentResponse=objMapper.readValue(response.asString(),SBRCSearchStudentResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
+	public String getissuanceDate() {
+		String strissuancedate =objSBRCSearchStudentResponse.getResult().get(0).getOsCreatedAt();
+		objWrapperFunctions.logReporter("Get issuance Date: ", strissuancedate, true);
+		return strissuancedate;
+	}
+
+
+	public void setDeleteStudentRequest(String strSchema, String strOsid) {
+		objDeleteStudentRequest.setSchema(strSchema);
+		objDeleteStudentRequest.setOsid(strOsid);
+		String str = this.createAPIFromPojo(objDeleteStudentRequest);
+		objWrapperFunctions.logReporter("Set Request:", str, true);
+	}
+
+	public DeleteStudentRequest getDeleteStudentRequest() {
+		return objDeleteStudentRequest;
+	}
+
+	public void getSBRCDeleteStudentResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			objSBRCDeleteStudentResponse=objMapper.readValue(response.asString(),SBRCDeleteStudentResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+
+	}
+
+	public boolean getSuccessMessageDelete() {
+		boolean strSuccess = objSBRCDeleteStudentResponse.isSuccess();
+		//		objWrapperFunctions.logReporterFalseScenario("Get Success message ", strSuccess);
+		return strSuccess;
+
+	}
+
+
+	public void setDigiLockerRegisterStudentRequest(String digiacc, String StudentID,String DID, String ReferanceID,
+			String Adhartoken, String strStudentName, String strDOB, String SchoolType, String strMeriPehchanID,
+			String username, String strGender, String strUdiseCodeRegister, String strSchoolName, String strStateCode,
+			String strStateName, String strDistrictCode, String strDistrictname, String strBlockCode,
+			String strBolckName,String strMobileNo) {
+		objBaseTest.ConfigFileReader();
+		objdigilockerRegisterEwalletRequest.setDigiacc(digiacc);
+		UserdataRegister userData=new UserdataRegister();
+		Student studentObj = new Student();
+		studentObj.setStudent_id(StudentID);
+		studentObj.setDID("");
+		studentObj.setReference_id(ReferanceID);
+		studentObj.setAadhar_token(Adhartoken);
+		studentObj.setStudent_name(strStudentName);
+		studentObj.setDob(strDOB);
+		studentObj.setSchool_type(SchoolType);
+		studentObj.setMeripehchan_id(strMeriPehchanID);
+		studentObj.setUsername(username);
+		studentObj.setGender(strGender);
+		studentObj.setSchool_udise(strUdiseCodeRegister);
+		studentObj.setSchool_name(strSchoolName);
+		studentObj.setStateCode(strStateCode);
+		studentObj.setStateName(strStateName);
+		studentObj.setDistrictCode(strDistrictCode);
+		studentObj.setDistrictName(strDistrictname);
+		studentObj.setBlockCode(strBlockCode);
+		studentObj.setBlockName(strBolckName);
+
+		userData.setStudent(studentObj);
+		objdigilockerRegisterEwalletRequest.setUserdata(userData);
+
+		Studentdetail studentDetailObj = new Studentdetail();
+		studentDetailObj.setStudent_detail_id("");
+		studentDetailObj.setStudent_id(objBaseTest.getConfig().getProperty("student_ID"));
+
+		studentDetailObj.setMobile(strMobileNo);
+		studentDetailObj.setGaurdian_name(objBaseTest.getConfig().getProperty("guardianName"));
+		studentDetailObj.setGrade(objBaseTest.getConfig().getProperty("class"));
+		studentDetailObj.setAcdemic_year(objBaseTest.getConfig().getProperty("academicYear"));
+		studentDetailObj.setStart_date("");
+		studentDetailObj.setEnd_date("");
+		studentDetailObj.setClaim_status(objBaseTest.getConfig().getProperty("status"));
+		studentDetailObj.setEnrollon(objBaseTest.getConfig().getProperty("enrolledOn"));
+		userData.setStudentdetail(studentDetailObj);
+
+		objdigilockerRegisterEwalletRequest.setUserdata(userData);
+		objdigilockerRegisterEwalletRequest.setDigimpid(strMeriPehchanID);
+		String str = this.createAPIFromPojo(objdigilockerRegisterEwalletRequest);
+		objWrapperFunctions.logReporter("Set Request register student", str, true);	
+	}
+
+	public digilockerRegisterEwalletRequest getDigiLockerRegisterStudentRequest() {
+		return objdigilockerRegisterEwalletRequest;	
+	}
+
+	//	public void setDigiLockerStudentApproveRequest(String strPending) {
+	//		
+	//		objsearchStudentForApprovalRequest.setIssuer(strPending);
+	////		filters filtersobj = new filters();
+	////		objsearchStudentForApprovalRequest.setFilters(filtersobj);
+	////		Claim_status claim_statusobj = new Claim_status();
+	////		filtersobj.setClaim_status(claim_statusobj);
+	////		claim_statusobj.setEq(strPending);
+	//		String str = this.createAPIFromPojo(objsearchStudentForApprovalRequest);
+	//		objWrapperFunctions.logReporter("Set Request search student for Approval", str, true);	
+	//	}
+
+	public searchStudentForApprovalRequest getDigiLockerStudentApproveRequest() {
+		return objsearchStudentForApprovalRequest;	
+	}
+
+	public void getSBRCSearchTeacherResponse(Response response) {
+		ObjectMapper objMapper= new ObjectMapper();
+		try {
+			objSBRCSearchTeacherResponse=objMapper.readValue(response.asString(),SBRCSearchTeacherResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+
+	}
+
+	public String getTeacherOsid() {
+		String strTeacherOsid = objSBRCSearchTeacherResponse.getOsid();
+		objWrapperFunctions.logReporter("Get teacher Osid:", strTeacherOsid, true);
+		return strTeacherOsid;
+	}
+
+	public void setDigiLockerStudentApproveRequest(String strDIDTeacher, String strDate, String strMobileNo,
+			String strguardianName, String strSchoolName, String strClass, String strAcademicYear, String strTeacherOsid,
+			String strUdiseCodeRegister, String strStudentID, String strStudentName, String strDOB, String strUuid,
+			String strReferanceID, String strStudentOsid) {
+		objsearchStudentForApprovalRequest.setIssuer(strDIDTeacher);
+		VcData vcdataobj = new VcData();
+		vcdataobj.setIssuanceDate(strDate);
+		vcdataobj.setExpirationDate(strDate);
+
+		objsearchStudentForApprovalRequest.setVcData(vcdataobj);
+
+		CredentialSubject credentialsubobj = new CredentialSubject();
+		credentialsubobj.setMobile(strMobileNo);
+		credentialsubobj.setGuardian_name(strguardianName);
+		credentialsubobj.setSchool_name(strSchoolName);
+		credentialsubobj.setGrade(strClass);
+		credentialsubobj.setAcademic_year(strAcademicYear);
+		credentialsubobj.setOsid("");
+		credentialsubobj.setSchool_id(strUdiseCodeRegister);
+		credentialsubobj.setStudent_id(strStudentID);
+		credentialsubobj.setStudent_name(strStudentName);
+		credentialsubobj.setDob(strDOB);
+		credentialsubobj.setAadhar_token(strUuid);
+		credentialsubobj.setReference_id(strReferanceID);
+		credentialsubobj.setStudent_osid(strStudentOsid);
+
+		objsearchStudentForApprovalRequest.setCredentialSubject(credentialsubobj);
+		String str = this.createAPIFromPojo(objsearchStudentForApprovalRequest);
+		objWrapperFunctions.logReporter("Set Request search student for Approval", str, true);
+	}
+
+	public void getDigiLockerApprovalResponse(Response response) {
+		//		ObjectMapper objMapper= new ObjectMapper();
+		//		try {
+		//			objSBRCDeleteStudentResponse=objMapper.readValue(response.asString(),SBRCDeleteStudentResponse.class);
+		//		} catch (Exception e) {
+		//			e.printStackTrace();
+		//		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);	
+
+	}
+
+
+
+}
 

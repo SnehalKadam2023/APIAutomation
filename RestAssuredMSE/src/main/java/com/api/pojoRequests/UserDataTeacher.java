@@ -4,19 +4,20 @@ import java.util.ArrayList;
 
 import com.api.pojoResponse.ResultSchoolData;
 import com.api.pojoResponse.UserData;
+import com.api.pojoResponse.UserDataPortal;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserDataTeacher {
 	@JsonProperty("teacher")
-	ArrayList<UserData> teacher;
+	UserDataPortal teacher;
 	@JsonProperty("school")
 	ResultSchoolData school;
 	
-	public ArrayList<UserData> getTeacher() {
+	public UserDataPortal getTeacher() {
 		return teacher;
 	}
-	public void setTeacher(ArrayList<UserData> teacher) {
-		this.teacher = teacher;
+	public void setTeacher(UserDataPortal strTeacherData) {
+		this.teacher = strTeacherData;
 	}
 	public ResultSchoolData getSchool() {
 		return school;

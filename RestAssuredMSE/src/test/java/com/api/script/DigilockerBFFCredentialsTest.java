@@ -129,21 +129,21 @@ public class DigilockerBFFCredentialsTest extends BaseTest{
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);		
 	}
 
-//	@Title("Verify user is able to search teacher")
-//	@Description("Verify user is able to search teacher")
-//	@Test(priority = 6)
-//	public void API_06_VerifyUserIsAbleToSearchTeacher() {
-//		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addHeader("Authorization", "Bearer " +objDigilockerportalTest.strTokenTeacher).build();
-//		objAPIview.setBFFCredentialSearchStudent(objDigilockerportalTest.strDIDTeacher);
-//		Response response =	given().spec(reqSpec).body(objAPIview.getBFFCredentialSearchStudent()).when()
-//				.post(ApiResreqURL.valueOf("postSearchStudent").returnResourcePath()).then().extract().response();
-//
-//		objAPIview.getSearchStudentResponse(response);
-//		String actResponseCode=getConfig().getProperty("StatusCodeOK");
-//		objcommonMethodsView.validateStatusCode(response, actResponseCode);
-//		boolean success =objAPIview.getSuccessMessageSearchStudent();
-//		objcommonMethodsView.validateSuccessmessage(success);
-//	}
+	@Title("Verify user is able to search teacher")
+	@Description("Verify user is able to search teacher")
+	@Test(priority = 6)
+	public void API_06_VerifyUserIsAbleToSearchTeacher() {
+		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addHeader("Authorization", "Bearer " +objDigilockerportalTest.strTokenTeacher).build();
+		objAPIview.setBFFCredentialSearchStudent(objDigilockerportalTest.strDIDTeacher);
+		Response response =	given().spec(reqSpec).body(objAPIview.getBFFCredentialSearchStudent()).when()
+				.post(ApiResreqURL.valueOf("postSearchTeacher").returnResourcePath()).then().extract().response();
+
+		objAPIview.getSearchStudentResponse(response);
+		String actResponseCode=getConfig().getProperty("StatusCodeOK");
+		objcommonMethodsView.validateStatusCode(response, actResponseCode);
+		boolean success =objAPIview.getSuccessMessageSearchStudent();
+		objcommonMethodsView.validateSuccessmessage(success);
+	}
 
 
 }

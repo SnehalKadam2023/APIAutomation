@@ -1,39 +1,26 @@
 package com.api.pojoResponse;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.ArrayList;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class DigilockerGetStudentDataResponse {
+public class SBRCSearchStudentResponse {
 	private boolean success;
 	private String status;
 	private String message;
 	@JsonProperty("result")
-	ResultStudentData result;
-	@JsonProperty("detail")
-	Detail detail;
-
-
-	// Getter Methods 
-
-	public ResultStudentData getResult() {
-		return result;
-	}
-
-	public void setResult(ResultStudentData result) {
-		this.result = result;
-	}
-
-	public Detail getDetail() {
-		return detail;
-	}
-
-	public void setDetail(Detail detail) {
-		this.detail = detail;
-	}
+	ArrayList<ResultStudentData> result;
 
 	public boolean getSuccess() {
 		return success;
+	}
+
+	public ArrayList<ResultStudentData> getResult() {
+		return result;
+	}
+
+	public void setResult(ArrayList<ResultStudentData> result) {
+		this.result = result;
 	}
 
 	public String getStatus() {
@@ -57,4 +44,6 @@ public class DigilockerGetStudentDataResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
+
 }

@@ -3,7 +3,7 @@ package com.api.pojoResponse;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ResultSchoolData {
+public class ResultSchoolDetails {
 	private String udiseCode;
 	private String schoolName;
 	private int schoolCategory;
@@ -24,7 +24,14 @@ public class ResultSchoolData {
 	private String did;
 	private String clientId;
 	private String clientSecret;
-	
+	private String osid;
+
+	public String getOsid() {
+		return osid;
+	}
+	public void setOsid(String osid) {
+		this.osid = osid;
+	}
 	public String getUdiseCode() {
 		return udiseCode;
 	}
@@ -145,4 +152,5 @@ public class ResultSchoolData {
 	public void setClientSecret(String clientSecret) {
 		this.clientSecret = clientSecret;
 	}
+
 }

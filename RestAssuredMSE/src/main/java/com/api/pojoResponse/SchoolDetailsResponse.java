@@ -9,9 +9,8 @@ public class SchoolDetailsResponse {
 	private String status;
 	private String message;
 	@JsonProperty("result")
-	ResultSchoolData result;
-
-
+	ResultSchoolDetails result;
+	
 	// Getter Methods 
 
 	public boolean getSuccess() {
@@ -26,7 +25,7 @@ public class SchoolDetailsResponse {
 		return message;
 	}
 
-	public ResultSchoolData getResult() {
+	public ResultSchoolDetails getResult() {
 		return result;
 	}
 
@@ -44,7 +43,7 @@ public class SchoolDetailsResponse {
 		this.message = message;
 	}
 
-	public void setResult(ResultSchoolData result) {
+	public void setResult(ResultSchoolDetails result) {
 		this.result = result;
 	}
 }

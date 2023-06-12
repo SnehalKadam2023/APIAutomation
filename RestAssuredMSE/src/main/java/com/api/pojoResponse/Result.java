@@ -8,10 +8,9 @@ public class Result {
 	private String name;
 	private String mobile;
 	private String dob;
+	private String gender;
 	private String username;
-
 	private String uuid;
-
 	private float students_registered;
 	private float claims_pending;
 	private float claims_approved;
@@ -118,5 +117,13 @@ public class Result {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 }

@@ -1,22 +1,72 @@
 package com.api.pojoResponse;
+
 import java.util.ArrayList;
 
+import com.api.pojoRequests.UserDataTeacher;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
-
-public class DigiLockerTokenEwalletResponse {
+public class DigiLockerTokenPortalResponse {
 	private boolean success;
 	private String status;
 	private String message;
-	Result ResultObject;
-	Digi DigiObject;
+	@JsonProperty("result")
+	Result result;
+	@JsonProperty("digi")
+	Digi digi;
 	private String user;
-	UserData userData;
+	@JsonProperty("userData")
+	UserDataTeacher userData;
 	@JsonProperty("detail")
-	Detail DetailObject;
-	private String token;
+	Detail detail;
 	private String needaadhaar;
+	
+	
+	public String getNeedaadhaar() {
+		return needaadhaar;
+	}
+
+	public void setNeedaadhaar(String needaadhaar) {
+		this.needaadhaar = needaadhaar;
+	}
+
+	public Result getResult() {
+		return result;
+	}
+
+	public void setResult(Result result) {
+		this.result = result;
+	}
+
+	public Digi getDigi() {
+		return digi;
+	}
+
+	public void setDigi(Digi digi) {
+		this.digi = digi;
+	}
+
+	public Detail getDetail() {
+		return detail;
+	}
+
+	public void setDetail(Detail detail) {
+		this.detail = detail;
+	}
+
+
+
+	public UserDataTeacher getUserData() {
+		return userData;
+	}
+
+	public void setUserData(UserDataTeacher userData) {
+		this.userData = userData;
+	}
+
+
+
+	private String token;
 
 
 	// Getter Methods 
@@ -33,33 +83,15 @@ public class DigiLockerTokenEwalletResponse {
 		return message;
 	}
 
-	public Result getResult() {
-		return ResultObject;
-	}
-
-	public Digi getDigi() {
-		return DigiObject;
-	}
 
 	public String getUser() {
 		return user;
-	}
-
-	public Detail getDetail() {
-		return DetailObject;
 	}
 
 	public String getToken() {
 		return token;
 	}
 	
-	public UserData getUserData() {
-		return userData;
-	}
-
-	public void setUserData(UserData userData) {
-		this.userData = userData;
-	}
 
 	// Setter Methods 
 
@@ -75,31 +107,13 @@ public class DigiLockerTokenEwalletResponse {
 		this.message = message;
 	}
 
-	public void setResult(Result resultObject) {
-		this.ResultObject = resultObject;
-	}
-
-	public void setDigi(Digi digiObject) {
-		this.DigiObject = digiObject;
-	}
 
 	public void setUser(String user) {
 		this.user = user;
-	}
-
-	public void setDetail(Detail detailObject) {
-		this.DetailObject = detailObject;
 	}
 
 	public void setToken(String token) {
 		this.token = token;
 	}
 
-	public String getNeedaadhaar() {
-		return needaadhaar;
-	}
-
-	public void setNeedaadhaar(String needaadhaar) {
-		this.needaadhaar = needaadhaar;
-	}
 }

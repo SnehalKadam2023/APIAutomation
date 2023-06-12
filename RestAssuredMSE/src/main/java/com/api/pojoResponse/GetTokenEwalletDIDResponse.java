@@ -1,18 +1,17 @@
 package com.api.pojoResponse;
+
 import java.util.ArrayList;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-@JsonIgnoreProperties(ignoreUnknown = true)
 
-public class DigiLockerTokenEwalletResponse {
+public class GetTokenEwalletDIDResponse {
 	private boolean success;
 	private String status;
 	private String message;
 	Result ResultObject;
 	Digi DigiObject;
 	private String user;
-	UserData userData;
+	ArrayList<UserData> userData;
 	@JsonProperty("detail")
 	Detail DetailObject;
 	private String token;
@@ -52,16 +51,40 @@ public class DigiLockerTokenEwalletResponse {
 	public String getToken() {
 		return token;
 	}
-	
-	public UserData getUserData() {
+
+	// Setter Methods 
+
+	public Result getResultObject() {
+		return ResultObject;
+	}
+
+	public void setResultObject(Result resultObject) {
+		ResultObject = resultObject;
+	}
+
+	public Digi getDigiObject() {
+		return DigiObject;
+	}
+
+	public void setDigiObject(Digi digiObject) {
+		DigiObject = digiObject;
+	}
+
+	public ArrayList<UserData> getUserData() {
 		return userData;
 	}
 
-	public void setUserData(UserData userData) {
+	public void setUserData(ArrayList<UserData> userData) {
 		this.userData = userData;
 	}
 
-	// Setter Methods 
+	public Detail getDetailObject() {
+		return DetailObject;
+	}
+
+	public void setDetailObject(Detail detailObject) {
+		DetailObject = detailObject;
+	}
 
 	public void setSuccess(boolean success) {
 		this.success = success;
@@ -102,4 +125,5 @@ public class DigiLockerTokenEwalletResponse {
 	public void setNeedaadhaar(String needaadhaar) {
 		this.needaadhaar = needaadhaar;
 	}
+
 }

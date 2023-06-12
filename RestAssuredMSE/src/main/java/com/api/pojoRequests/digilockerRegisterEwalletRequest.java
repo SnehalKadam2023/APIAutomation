@@ -8,7 +8,7 @@ public class digilockerRegisterEwalletRequest {
 	
 	private String digiacc;
 	@JsonProperty("userdata")
-	Userdata userdata;
+	UserdataRegister userdata;
 	private String digimpid;
 
 
@@ -18,7 +18,7 @@ public class digilockerRegisterEwalletRequest {
 		return digiacc;
 	}
 
-	public Userdata getUserdata() {
+	public UserdataRegister getUserdata() {
 		return userdata;
 	}
 
@@ -32,7 +32,7 @@ public class digilockerRegisterEwalletRequest {
 		this.digiacc = digiacc;
 	}
 
-	public void setUserdata(Userdata userdata) {
+	public void setUserdata(UserdataRegister userdata) {
 		this.userdata = userdata;
 	}
 

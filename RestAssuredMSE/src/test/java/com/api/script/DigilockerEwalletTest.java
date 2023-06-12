@@ -22,24 +22,34 @@ public class DigilockerEwalletTest extends BaseTest{
 	//Global variables
 	private RequestSpecification reqSpec = null;
 	public static String strAuthCode;
-	String strDigiLockerurl;
+	public static String strDigiLockerLearnerUrl;
 	public static String strTokenStudent;
 	public static String strAccessToken;
 	public static String strDIDStudent;
-	String strUuid;
-	String strStateCode;
+	public static String strUuid;
+	public static String strStateCode;
 	public static String strDistrictCode;
-	String strBlockCode;
+	public static String strBlockCode;
 	public static String strUdiseCode;
-	private ArrayList<UserData> strUserData;
-	private Detail strStudentDetail;
+	public static String strStudentName;
+	public static String strMeriPehchanID;
+	public static String strMobileNo;
+	public static String strDOB;
+	public static String strStateName;
+	public static String strDistrictname;
+	public static String strBolckName;
+	public static String strUdiseCodeRegister;
+	public static String strSchoolName;
+	public static String strGender;
+	public static String strStudentOsid;
+	public static String StrDate;
 
 	//Initialize
 	private APIview objAPIview= new APIview(this);
 	private commonMethodsView objcommonMethodsView= new commonMethodsView(this);
-	private String strMeriPehchanID;
 	
-
+	
+	
 	@BeforeClass
 	public void initializeEnvironment() {
 		ConfigFileReader(); 
@@ -56,14 +66,14 @@ public class DigilockerEwalletTest extends BaseTest{
 		objAPIview.getDigiurlResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
-		strDigiLockerurl=objAPIview.getDigilockerUrl();
+		strDigiLockerLearnerUrl=objAPIview.getDigilockerUrl();
 	}
 
 	@Title("Verify that user is able to generate auth code")
 	@Description("Verify that user is able to generate auth code")
 	@Test(priority = 2)
 	public void API_02_VerifyUserIsAbleToGenerateAuthCode() {
-		this.initializeWebEnvironment(strDigiLockerurl); 
+		this.initializeWebEnvironment(strDigiLockerLearnerUrl); 
 		strAuthCode=objAPIview.EnterDetailsOnDigilockerLoginPageUsingMobile(getConfig().getProperty("Mobile_Number"),getConfig().getProperty("Pin"));	
 	}
 
@@ -80,13 +90,14 @@ public class DigilockerEwalletTest extends BaseTest{
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 		objAPIview.getDigiLockerTokenEwalletResponse(response);
-		objAPIview.getSuccessMessage();
-		strUserData =objAPIview.getStudentUserData();
+		boolean success=objAPIview.getSuccessMessage();
+		objcommonMethodsView.validateSuccessmessage(success);
+		strStudentName=objAPIview.getStudentName();
 		strMeriPehchanID = objAPIview.getMeripehchanID();
-		strStudentDetail=objAPIview.getStudentDetail();
-		strTokenStudent = objAPIview.getToken();
+		strMobileNo =objAPIview.getmobileNo();
+		strDOB = objAPIview.getDOB();
+		strGender = objAPIview.getGender();
 		strAccessToken = objAPIview.getAccessToken();
-		strDIDStudent = objAPIview.getDID();
 	}
 
 	@Title("Verify user is able to generate uuid")
@@ -104,7 +115,6 @@ public class DigilockerEwalletTest extends BaseTest{
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 		objAPIview.getDigiLockerAdharEwalletResponse(response);
 		objAPIview.getSuccessMessageAdhar();
-
 		strUuid = objAPIview.getUuid();
 	}
 
@@ -120,6 +130,7 @@ public class DigilockerEwalletTest extends BaseTest{
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objAPIview.getStatus();
 		strStateCode =objAPIview.getStateCode();
+		strStateName = objAPIview.getStateName();
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 	}
 
@@ -138,7 +149,7 @@ public class DigilockerEwalletTest extends BaseTest{
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 		objAPIview.getStatus();
 		strDistrictCode =objAPIview.getDistrictCode();
-
+		strDistrictname =objAPIview.getDistrictName();
 	}
 	@Title("Verify user is able to get Block list")
 	@Description("Verify user is able to get Block list")
@@ -155,6 +166,7 @@ public class DigilockerEwalletTest extends BaseTest{
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 		objAPIview.getStatus();
 		strBlockCode =objAPIview.getBlockCode();
+		strBolckName = objAPIview.getBlockName();
 
 	}
 	@Title("Verify user is able to get school list")
@@ -169,25 +181,43 @@ public class DigilockerEwalletTest extends BaseTest{
 
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objAPIview.getSchoolListResponse(response);
+		strUdiseCodeRegister=objAPIview.getUdiseCode();
+		strSchoolName = objAPIview.getSchoolName();
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 		objAPIview.getStatusSchoolList();
+		
 	}
 
-	@Title("verify user is able to logout from digilocker")
-	@Description("verify user is able to logout from digilocker")
+	@Title("Verify user is able to register student")
+	@Description("Verify user is able to register student")
 	@Test(priority = 9)
-	public void API_09_verifyUserIsAbleToLogoutFromDigilocker() {
+	public void API_09_VerifyUserIsAbleToRegisterStudent() {
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
-		objAPIview.setDigiLockerLogoutRequest(getConfig().getProperty("digiacc"),strAccessToken);
-
-		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerLogoutRequest()).when()
-				.post(ApiResreqURL.valueOf("postDigilockerLogout").returnResourcePath()).then().extract().response();
-
-		String actResponseCode=getConfig().getProperty("StatusCodeOK");
+		objAPIview.setDigiLockerRegisterStudentRequest(getConfig().getProperty("digiacc"),getConfig().getProperty("student_ID"),
+				getConfig().getProperty("DID"),getConfig().getProperty("referenceID"),strUuid,
+				strStudentName,strDOB,getConfig().getProperty("schoolType"),strMeriPehchanID,strUuid,
+				strGender,strUdiseCodeRegister,strSchoolName,strStateCode,strStateName,strDistrictCode,
+				strDistrictname,strBlockCode,strBolckName,strMobileNo);
+		int count =0;
+		boolean success=false;
+		Response response = null;
+		String actResponseCode;
+		do
+		{	
+		 response = given().spec(reqSpec).body(objAPIview.getDigiLockerRegisterStudentRequest()).when()
+				.post(ApiResreqURL.valueOf("postRegisterEwallet").returnResourcePath()).then().extract().response();
+		
+		 actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objAPIview.getDigiLockerTokenEwalletResponse(response);
+		
+		success=objAPIview.getSuccessMessage();
+		count++;	
+		if (success==true && count==6) {
+			break;	
+		}
+	} while(success==false && count<=6);
+		strTokenStudent = objAPIview.getToken();
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
-		objAPIview.getSuccessMessage();
-
 	}
 
 	@Title("Get Student Data")
@@ -208,7 +238,7 @@ public class DigilockerEwalletTest extends BaseTest{
 	@Description("Verify that user is able to generate auth code and token using ser name")
 	@Test(priority = 11)
 	public void API_11_VerifyThatUserIsAbleToGenerateAuthCodeAndTokenForUsername() {
-		this.initializeWebEnvironment(strDigiLockerurl); 
+		this.initializeWebEnvironment(strDigiLockerLearnerUrl); 
 		strAuthCode=objAPIview.EnterDetailsOnDigilockerLoginPageUsingUsername(getConfig().getProperty("Username"),getConfig().getProperty("Pin"));
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
 		objAPIview.setDigiLockerRequest(getConfig().getProperty("digiacc"),strAuthCode);
@@ -218,21 +248,39 @@ public class DigilockerEwalletTest extends BaseTest{
 
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
-		objAPIview.getDigiLockerTokenEwalletResponse(response);
-	}
-	
-	@Title("Verify user is able to register student")
-	@Description("Verify user is able to register student")
+		objAPIview.getDigiLockerTokenEwalletDIDResponse(response);
+	}	
+	@Title("verify user is able to logout from digilocker")
+	@Description("verify user is able to logout from digilocker")
 	@Test(priority = 12)
-	public void API_12_VerifyUserIsAbleToRegisterStudent() {
+	public void API_12_verifyUserIsAbleToLogoutFromDigilocker() {
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
-		objAPIview.setDigiLockerRegisterStudentRequest(getConfig().getProperty("digiacc"),strUserData,strStudentDetail,strMeriPehchanID);
+		objAPIview.setDigiLockerLogoutRequest(getConfig().getProperty("digiacc"),strAccessToken);
 
-		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerRegisterStudentRequest()).when()
-				.post(ApiResreqURL.valueOf("postRegisterEwallet").returnResourcePath()).then().extract().response();
+		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerLogoutRequest()).when()
+				.post(ApiResreqURL.valueOf("postDigilockerLogout").returnResourcePath()).then().extract().response();
+
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
-		objAPIview.getRegisterEwalletResponse(response);
+		objAPIview.getDigiLockerTokenEwalletResponse(response);
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
+		objAPIview.getSuccessMessage();
 	}
 	
+	@Title("SBRC Search Student")
+	@Description("SBRC Search Student")
+	@Test(priority = 13)
+	public void API_13_SBRCSearchStudent() {
+		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addHeader("Authorization", "Bearer " +strTokenStudent).build();
+		objAPIview.setSearchStudentRequest(getConfig().getProperty("schema_Student"),strStudentName);
+
+		Response response = given().spec(reqSpec).body(objAPIview.getSearchStudentRequest()).when()
+				.post(ApiResreqURL.valueOf("postSBRCSearchStudent").returnResourcePath()).then().extract().response();
+
+		objAPIview.getSBRCSearchStudentResponse(response);
+		strStudentOsid =objAPIview.getStudentOsid();
+		StrDate= objAPIview.getissuanceDate();
+		String actResponseCode=getConfig().getProperty("StatusCodeOK");
+		objcommonMethodsView.validateStatusCode(response, actResponseCode);	
+	}
+
 }
