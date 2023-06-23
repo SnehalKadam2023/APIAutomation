@@ -1,7 +1,7 @@
 package com.generic;
 
 public enum ApiResreqURL {
-	
+
 	getDigilockerAuthorizeEwallet("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/authorize/ewallet"),
 	postDigilockerTokenEwallet("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/token"),
 	postDigilockerAadhaarEwallet("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/aadhaar"),
@@ -17,30 +17,38 @@ public enum ApiResreqURL {
 	postDigilockerAadhaarPortal("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/aadhaar"),
 	getTeacherData("https://ulp.uniteframework.io/ulp-bff/v1/sso/user/portal"),
 	getDashboardCount("https://ulp.uniteframework.io/ulp-bff/v1/portal/count"),
-	postSearchStudent("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/search/student"),
 	getUdiseVerify("https://ulp.uniteframework.io/ulp-bff/v1/school/verify"),
 	getSchoolDetails("https://ulp.uniteframework.io/ulp-bff/v1/sso/school/{udiseCode}"),
-	getSchemaIDByCredentialsID("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/schema/{credentialID}"),
-	getRenderSchema("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/schema/json/{credentialSchemaID}"),
-	getRenderSchemaTemplate("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/rendertemplateschema/{credentialSchemaID}"),
+
+	postSearchStudent("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/search/student"),
+	getSchemaIDByCredentialsID(
+			"https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/schema/{credentialID}"),
+	getRenderSchema(
+			"https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/schema/json/{credentialSchemaID}"),
+	getRenderSchemaTemplate(
+			"https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/rendertemplateschema/{credentialSchemaID}"),
 	postRenderCredentials("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/render"),
-	postRegisterEwallet("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/register"),
+
+	// postRegisterEwallet("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/register"),
+	postRegisterEwallet("https://ulp.uniteframework.io/registry/api/v1/StudentDetail/invite"),
 	postRegisterTeacher("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/register"),
 	getToken("https://ulp.uniteframework.io/ulp-bff/v1/sbrc/token"),
+//	getToken("https://ulp.uniteframework.io/ulp-bff/v1/sso/digilocker/aadhaar"),
+
 	postSBRCSearchStudent("https://ulp.uniteframework.io/ulp-bff/v1/sbrc/search"),
 	postSBRCDeleteStudent("https://ulp.uniteframework.io/ulp-bff/v1/sbrc/delete"),
 	postSearchTeacher("https://ulp.uniteframework.io/ulp-bff/v1/sso/student/credentials/search/teacher"),
-	postStudentApproveRequest("https://ulp.uniteframework.io/ulp-bff/v1/credentials/approveStudentV2");
-	
+	postStudentApproveRequest("https://ulp.uniteframework.io/ulp-bff/v1/credentials/approveStudentV2"),
+	postStudentApprovelistRequest("https://ulp.uniteframework.io/ulp-bff/v1/sso/studentDetailV2");
+
 	private String strReturn;
-	
+
 	ApiResreqURL(String returnPath) {
-		this.strReturn=returnPath;
+		this.strReturn = returnPath;
 	}
-	
+
 	public String returnResourcePath() {
 		return strReturn;
 	}
-	
 
 }

@@ -8,6 +8,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import java.lang.reflect.Method;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
@@ -23,6 +35,10 @@ public class BaseTest extends Pojo {
 	private ChromeOptions options = new ChromeOptions();
 	private WrapperFunctions objWrapperFunctions;
 	private static Properties properties;
+	//Extent Report
+	public static ExtentReports extent;
+	public static ThreadLocal<ExtentTest> classLevelLog = new ThreadLocal<ExtentTest>();
+	public static ThreadLocal<ExtentTest> testLevelLog = new ThreadLocal<ExtentTest>();
 
 
 
@@ -52,15 +68,13 @@ public class BaseTest extends Pojo {
 			return null;
 		}
 	}
-
-	public void tearDownWebEnvironment(Properties objConfig) {
+	public void tearDownWebEnvironment() {
 		try {
 			webDriver.quit();
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
 	}
-	
 	
 	public static void ConfigFileReader(){
 	    BufferedReader reader;
@@ -74,6 +88,56 @@ public class BaseTest extends Pojo {
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }        
+	}
+
+	@BeforeSuite
+	public void setUp() {
+		extent=ExtentReportManager.GetExtent("./target/AutomationReport.html");
+	}
+
+	@BeforeTest
+	public void beforeTest() {
+
+	}
+
+	@BeforeClass
+	public void beforeClass() {
+		ExtentTest classLevelTest = extent.createTest(getClass().getSimpleName());
+		classLevelLog.set(classLevelTest);
+		ConfigFileReader(); 
+	}
+
+	@BeforeMethod
+	public void beforeMethod(Method method) {
+		ExtentTest test = classLevelLog.get().createNode(method.getName());
+		testLevelLog.set(test);
+	}
+
+	@AfterMethod
+	public void afterMethod(ITestResult testCaseResult) {
+		if(testCaseResult.isSuccess())
+		{
+		  testLevelLog.get().pass("This test case got passed");	
+		}
+		else
+		{
+			testLevelLog.get().fail("This test case got failed");
+		}
+		extent.flush();
+	}
+
+	@AfterClass
+	public void afterClass() {
+
+	}
+
+	@AfterTest
+	public void afterTest() {
+
+	}
+	@AfterSuite
+	public void tearDown() {
+
 	}
 
 

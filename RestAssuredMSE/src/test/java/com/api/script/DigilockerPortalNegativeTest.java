@@ -47,6 +47,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 
 		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerRequest()).when()
 				.post(ApiResreqURL.valueOf("postDigilockerTokenPortal").returnResourcePath()).then().extract().response();
+		testLevelLog.get().info("Generate Token using Wrong Auth code Response Data: "+response.asString());
 
 		String actResponseCode=getConfig().getProperty("StatusCodeUnauthorized");	
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
@@ -61,6 +62,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").build();
 		Response response =	given().spec(reqSpec)
 				.get(ApiResreqURL.valueOf("getStateList").returnResourcePath()).then().extract().response();
+		testLevelLog.get().info("Get State List Response Data: "+response.asString());
 
 		objAPIview.getListResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
@@ -79,6 +81,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 
 		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerDistrictRequest()).when()
 				.post(ApiResreqURL.valueOf("GetDistrictList").returnResourcePath()).then().extract().response();
+		testLevelLog.get().info("Get District List Response Data: "+response.asString());
 
 		objAPIview.getListNegativeResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
@@ -96,6 +99,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 
 		Response response = given().spec(reqSpec).body(objAPIview.getdigilockerBlockListRequest()).when()
 				.post(ApiResreqURL.valueOf("GetBlockList").returnResourcePath()).then().extract().response();
+		testLevelLog.get().info("Get Block List Response Data: "+response.asString());
 
 		objAPIview.getListNegativeResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
@@ -113,6 +117,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 
 		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerSchoolListRequest()).when()
 				.post(ApiResreqURL.valueOf("getSchoolList").returnResourcePath()).then().extract().response();
+		testLevelLog.get().info("Get School List Response Data: "+response.asString());
 
 		objAPIview.getListNegativeResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
@@ -130,6 +135,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 
 		Response response = given().spec(reqSpec).body(objAPIview.getUdiseVerifyRequest()).when()
 				.post(ApiResreqURL.valueOf("getUdiseVerify").returnResourcePath()).then().extract().response();
+		testLevelLog.get().info("Udise Details Response Data: "+response.asString());
 
 		objAPIview.getListNegativeResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
@@ -146,6 +152,7 @@ public class DigilockerPortalNegativeTest extends BaseTest{
 
 		Response response = given().spec(reqSpec).body(objAPIview.getDigiLockerLogoutRequest()).when()
 				.post(ApiResreqURL.valueOf("postDigilockerLogout").returnResourcePath()).then().extract().response();
+		testLevelLog.get().info("Log out from Digilocker Response Data: "+response.asString());
 
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
 		objAPIview.getDigiLockerTokenEwalletResponse(response);

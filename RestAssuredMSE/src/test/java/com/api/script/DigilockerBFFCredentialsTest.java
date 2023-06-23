@@ -51,9 +51,10 @@ public class DigilockerBFFCredentialsTest extends BaseTest{
 	@Test(priority = 1)
 	public void API_01_VerifyUserIsAbleToSearchStudent() {
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addHeader("Authorization", "Bearer " +objDigilockerEwalletTest.strTokenStudent).build();
-		objAPIview.setBFFCredentialSearchStudent(objDigilockerEwalletTest.strDIDStudent);
+		objAPIview.setBFFCredentialSearchStudentAndTeacher(objDigilockerEwalletTest.strDIDStudent);
 		responseSearchStudent =	given().spec(reqSpec).body(objAPIview.getBFFCredentialSearchStudent()).when()
 				.post(ApiResreqURL.valueOf("postSearchStudent").returnResourcePath()).then().extract().response();
+        testLevelLog.get().info("Search student Response Data : "+responseSearchStudent.asString());
 
 		objAPIview.getSearchStudentResponse(responseSearchStudent);
 		strCredentialsID=objAPIview.getCredentialID();
@@ -71,6 +72,7 @@ public class DigilockerBFFCredentialsTest extends BaseTest{
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addPathParam("credentialID", strCredentialsID).build();
 		Response response =	given().spec(reqSpec)
 				.get(ApiResreqURL.valueOf("getSchemaIDByCredentialsID").returnResourcePath()).then().extract().response();
+        testLevelLog.get().info("Get Schema ID by Credentials ID Response Data : "+response.asString());
 
 		objAPIview.getSchemaIDResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
@@ -87,6 +89,7 @@ public class DigilockerBFFCredentialsTest extends BaseTest{
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addPathParam("credentialSchemaID", strCredentialSchemaID).build();
 		responseRenderSchema =	given().spec(reqSpec)
 				.get(ApiResreqURL.valueOf("getRenderSchema").returnResourcePath()).then().extract().response();
+        testLevelLog.get().info("Get Render Schema Response Data : "+responseRenderSchema.asString());
 
 		objAPIview.getRenderSchemaResponse(responseRenderSchema);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
@@ -103,6 +106,7 @@ public class DigilockerBFFCredentialsTest extends BaseTest{
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addPathParam("credentialSchemaID", strCredentialSchemaID).build();
 		responseSchemaTemplate = given().spec(reqSpec)
 				.get(ApiResreqURL.valueOf("getRenderSchemaTemplate").returnResourcePath()).then().extract().response();
+        testLevelLog.get().info("Get Render Schema Template Response Data : "+responseSchemaTemplate.asString());
 
 		objAPIview.getSchemaTemplateResponse(responseSchemaTemplate);
 		strSchemaTemplate = objAPIview.getSchemaTemplate();
@@ -124,6 +128,7 @@ public class DigilockerBFFCredentialsTest extends BaseTest{
 		objAPIview.setBFFCredentialRenderRequest(strCredentials,strResultRenderSchema,strSchemaTemplate);
 		Response response = given().spec(reqSpec).body(objAPIview.getBFFCredentialRenderRequest()).when()
 				.post(ApiResreqURL.valueOf("postRenderCredentials").returnResourcePath()).then().extract().response();
+        testLevelLog.get().info("Credential Render Response Data : "+response.asString());
 
 		String actResponseCode=getConfig().getProperty("StatusCreated");
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);		
@@ -134,9 +139,10 @@ public class DigilockerBFFCredentialsTest extends BaseTest{
 	@Test(priority = 6)
 	public void API_06_VerifyUserIsAbleToSearchTeacher() {
 		reqSpec = new RequestSpecBuilder().addHeader("Content-Type","application/json").addHeader("Authorization", "Bearer " +objDigilockerportalTest.strTokenTeacher).build();
-		objAPIview.setBFFCredentialSearchStudent(objDigilockerportalTest.strDIDTeacher);
+		objAPIview.setBFFCredentialSearchStudentAndTeacher(objDigilockerportalTest.strDIDTeacher);
 		Response response =	given().spec(reqSpec).body(objAPIview.getBFFCredentialSearchStudent()).when()
 				.post(ApiResreqURL.valueOf("postSearchTeacher").returnResourcePath()).then().extract().response();
+        testLevelLog.get().info("Search Teacher Response Data : "+response.asString());
 
 		objAPIview.getSearchStudentResponse(response);
 		String actResponseCode=getConfig().getProperty("StatusCodeOK");
