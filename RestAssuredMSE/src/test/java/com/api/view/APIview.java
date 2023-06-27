@@ -9,6 +9,9 @@ import com.api.pojoRequests.ApprovalCredentialSubjectReq;
 import com.api.pojoRequests.BffCredentialRenderRequest;
 import com.api.pojoRequests.BffSearchStudentRequest;
 import com.api.pojoRequests.Claim_status;
+import com.api.pojoRequests.CredentialIssueRequest;
+import com.api.pojoRequests.CredentialIssueSubject;
+import com.api.pojoRequests.CredentialIssueSubjectCommon;
 import com.api.pojoRequests.CredentialSubject;
 import com.api.pojoRequests.DeleteStudentRequest;
 import com.api.pojoRequests.DigiLockerLogoutRequest;
@@ -24,6 +27,7 @@ import com.api.pojoRequests.UserDataTeacher;
 import com.api.pojoRequests.UserdataRegister;
 import com.api.pojoRequests.VcData;
 import com.api.pojoRequests.Filter;
+import com.api.pojoRequests.IssuerDetail;
 import com.api.pojoRequests.Student_name;
 import com.api.pojoRequests.countFields;
 import com.api.pojoRequests.digilockerAdharRequest;
@@ -41,6 +45,7 @@ import com.api.pojoResponse.BffCredentialsSearchStudentsresponse;
 import com.api.pojoResponse.BffGetRenderSchemaResponse;
 import com.api.pojoResponse.BffGetSchemaIDResponse;
 import com.api.pojoResponse.BffGetSchemaTemplateResponse;
+import com.api.pojoResponse.CredentialsSearchAllResponse;
 import com.api.pojoResponse.Detail;
 import com.api.pojoResponse.DigiLockerPortalTeacherRegisterResponse;
 import com.api.pojoResponse.DigiLockerTokenEwalletResponse;
@@ -50,7 +55,9 @@ import com.api.pojoResponse.DigilockerGetDashboardResponse;
 import com.api.pojoResponse.DigilockerGetStudentDataResponse;
 import com.api.pojoResponse.DigilockerSchoolListResponse;
 import com.api.pojoResponse.DigilockerStateListResponse;
+import com.api.pojoResponse.GetCredentialsVerifyResponse;
 import com.api.pojoResponse.GetTokenEwalletDIDResponse;
+import com.api.pojoResponse.RenderTemplateResponse;
 import com.api.pojoResponse.ResultRenderSchema;
 import com.api.pojoResponse.ResultSchoolData;
 import com.api.pojoResponse.ResultSearchStudent;
@@ -83,6 +90,7 @@ import java.util.List;
 import java.util.Base64;
 import io.restassured.response.Response;
 import ru.yandex.qatools.allure.annotations.Step;
+import com.api.pojoResponse.CredentialIssueResponse;
 
 public class APIview {
 
@@ -136,6 +144,12 @@ public class APIview {
 	private SBRCTokenResposne objSBRCTokenResposne;
 	private Claim_status objClaim_status;
 	private DigiLockerPortalTeacherRegisterResponse objDigiLockerPortalTeacherRegisterResponse;
+	private GetCredentialsVerifyResponse objGetCredentialsVerifyResponse;
+	private RenderTemplateResponse objRenderTemplateResponse;
+	private CredentialsSearchAllResponse objCredentialsSearchAllResponse;
+	private CredentialIssueRequest objCredentialIssueRequest;
+	private CredentialIssueSubjectCommon objCredentialIssueSubjectCommon;
+	private CredentialIssueResponse objCredentialIssueResponse;
 
 	public APIview(Pojo pojo) {
 		this.objPojo = pojo;
@@ -186,6 +200,12 @@ public class APIview {
 		objSBRCTokenResposne = new SBRCTokenResposne();
 		objClaim_status = new Claim_status();
 		objDigiLockerPortalTeacherRegisterResponse = new DigiLockerPortalTeacherRegisterResponse();
+		objGetCredentialsVerifyResponse = new GetCredentialsVerifyResponse();
+		objRenderTemplateResponse = new RenderTemplateResponse();
+		objCredentialsSearchAllResponse = new CredentialsSearchAllResponse();
+		objCredentialIssueRequest = new CredentialIssueRequest();
+		objCredentialIssueSubjectCommon = new CredentialIssueSubjectCommon();
+		objCredentialIssueResponse = new CredentialIssueResponse();
 	}
 
 	/**
@@ -734,8 +754,8 @@ public class APIview {
 		return strSuccess;
 	}
 
-	/* Updated  by : tejal 
-	 * Use for teacher and student both 
+	/*
+	 * Updated by : tejal Use for teacher and student both
 	 */
 	public void setBFFCredentialSearchStudentAndTeacher(String strDID) {
 		Subject objSubject = new Subject();
@@ -745,8 +765,8 @@ public class APIview {
 		objWrapperFunctions.logReporter("Set Request BFF Search:", str, true);
 	}
 
-	/* 
-	 * Use for teacher and student both 
+	/*
+	 * Use for teacher and student both
 	 */
 	public BffSearchStudentRequest getBFFCredentialSearchStudent() {
 		return objBffSearchStudentRequest;
@@ -1486,4 +1506,112 @@ public class APIview {
 		objWrapperFunctions.logReporter("Get DID school", strDID, true);
 		return strDID;
 	}
+
+	/*
+	 * @author : tejal Moture description : Get Credential Verify
+	 */
+	public void getCredentialVerifyResponse(Response response) {
+		ObjectMapper objMapper = new ObjectMapper();
+		try {
+			objGetCredentialsVerifyResponse = objMapper.readValue(response.asString(),
+					GetCredentialsVerifyResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
+	/*
+	 * @author : tejal Moture description : Get Render template
+	 */
+	public void RenderTemplateResponse(Response response) {
+		ObjectMapper objMapper = new ObjectMapper();
+		try {
+			objRenderTemplateResponse = objMapper.readValue(response.asString(), RenderTemplateResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
+	public String GetCredentialSchemaDID() {
+		String strDID = objRenderTemplateResponse.getResult().getSchema();
+		objWrapperFunctions.logReporter("Get DID school", strDID, true);
+		return strDID;
+	}
+
+	public void getSearchAllResponse(Response response) {
+		ObjectMapper objMapper = new ObjectMapper();
+		try {
+			objCredentialsSearchAllResponse = objMapper.readValue(response.asString(),
+					CredentialsSearchAllResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
+	// Author : tejal moture
+	// date : 26 June 2023
+	public void setCredentialIssueRequest(String strClientId, String ClientSecret, String strDate, String strClass,
+			String strstateName, String strstateCode, String strBlockCode, String strBLockName, String strDistrictCode,
+			String strDistrictName, String strStudentID, String strStudentName, String strDOB, String strUuid,
+			String strAcademicYear, String strReferanceID, String strguardianName, String strEnrolled_on, String strDid,
+			String strSchoolName, String strUdise) {
+
+		objCredentialIssueRequest.setClientId(strClientId);
+		objCredentialIssueRequest.setClientSecret(ClientSecret);
+
+		VcData vcdataobj = new VcData();
+		vcdataobj.setIssuanceDate(strDate);
+		vcdataobj.setExpirationDate(strDate);
+		objCredentialIssueRequest.setVcData(vcdataobj);
+
+		IssuerDetail objIssuerDetail = new IssuerDetail();
+		objIssuerDetail.setDid(strDid);
+		objIssuerDetail.setSchoolName(strSchoolName);
+		objIssuerDetail.setUdise(strUdise);
+		objCredentialIssueRequest.setIssuerDetail(objIssuerDetail);
+
+		objCredentialIssueSubjectCommon.setGrade(strClass);
+		objCredentialIssueSubjectCommon.setAcademic_year(strAcademicYear);
+		objCredentialIssueSubjectCommon.setStateCode(strstateCode);
+		objCredentialIssueSubjectCommon.setStateName(strstateName);
+		objCredentialIssueSubjectCommon.setDistrictCode(strDistrictCode);
+		objCredentialIssueSubjectCommon.setDistrictName(strDistrictName);
+		objCredentialIssueSubjectCommon.setBlockCode(strBlockCode);
+		objCredentialIssueSubjectCommon.setBlockName(strBLockName);
+		objCredentialIssueRequest.setCredentialSubjectCommon(objCredentialIssueSubjectCommon);
+
+		CredentialIssueSubject objCredentialIssueSubject = new CredentialIssueSubject();
+		objCredentialIssueSubject.setStudent_id(strStudentID);
+		objCredentialIssueSubject.setStudent_name(strStudentName);
+		objCredentialIssueSubject.setDob(strDOB);
+		objCredentialIssueSubject.setAadhar_token(strUuid);
+		objCredentialIssueSubject.setReference_id(strReferanceID);
+		objCredentialIssueSubject.setGuardian_name(strguardianName);
+		objCredentialIssueSubject.setEnrolled_on(strEnrolled_on);
+		objCredentialIssueRequest.setCredentialSubject(objCredentialIssueSubject);
+
+		String str = this.createAPIFromPojo(objsearchStudentListApprovalRequest);
+		objWrapperFunctions.logReporter("Set tRequest for post Credential Issue :", str, true);
+	}
+
+	public CredentialIssueRequest getCredentialIssueRequest() {
+		return objCredentialIssueRequest;
+	}
+
+	/*
+	 * @author : tejal Moture description : Credential Issue Response
+	 */
+	public void CredentialIssueResponse(Response response) {
+		ObjectMapper objMapper = new ObjectMapper();
+		try {
+			objCredentialIssueResponse = objMapper.readValue(response.asString(), CredentialIssueResponse.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		objWrapperFunctions.logReporter("get response:", response.asPrettyString(), true);
+	}
+
 }

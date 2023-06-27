@@ -37,7 +37,7 @@ public class DigilockerportalTest extends BaseTest {
 	private String strGender;
 	public static String strUdiseCodeRegister;
 	private String strSchoolName;
-	private String strDIDSchool;
+	private static String strDIDSchool;
 	private String strOSIDSchool;
 
 	// Initialize
@@ -293,7 +293,7 @@ public class DigilockerportalTest extends BaseTest {
 		objcommonMethodsView.validateSuccessmessage(success);
 	}
 
-     //@author : tejal 
+	// @author : tejal
 	@Title("Verify user is able to find List of students for Approval")
 	@Description("Verify user is able to find list of students for Approval")
 	@Test(priority = 16)
@@ -312,7 +312,8 @@ public class DigilockerportalTest extends BaseTest {
 		String actResponseCode = getConfig().getProperty("StatusCodeOK");
 		objcommonMethodsView.validateStatusCode(response, actResponseCode);
 	}
-	   //@author : tejal 
+
+	// @author : tejal
 	@Title("Verify user is able find student for Approval")
 	@Description("Verify user is able student for Approval")
 	@Test(priority = 17)
@@ -342,5 +343,7 @@ public class DigilockerportalTest extends BaseTest {
 //		objAPIview.getSuccessMessageApproval();
 //		strDIDStudent = objAPIview.getDIDStudent();
 	}
+
+	
 
 }
